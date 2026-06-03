@@ -391,7 +391,8 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: linear-gradient(135deg, #0c2025 0%, #071518 100%);
   z-index: 99999999;
 }
 

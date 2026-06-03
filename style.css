@@ -655,6 +655,8 @@ a {
   gap: 1.5rem;
   /* height: calc(100vh - var(--navbar-height) - 5rem); */
   height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .catalog-embed__title {
@@ -1054,6 +1056,17 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media screen and (min-width: 1800px) {
+  .hero {
+    align-items: self-start;
+  }
+
+  .hero__text {
+    margin-left: 4%;
+    margin-top: 7%;
+  }
 }
 
 .hero__est {
@@ -2373,7 +2386,7 @@ a {
   .hero__video,
   .hero__image {
     max-width: 100%;
-    border-radius: 12px;
+    /* border-radius: 12px; */
   }
 
   .features__title {
