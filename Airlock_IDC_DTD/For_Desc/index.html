@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -605,9 +605,98 @@
 
           <!-- *************************page 1 Start**************************** -->
 
-          <div class="page" style="display: flex; justify-content: center; align-items: center;">
-          
-              Page 1
+          <div class="page relative bg-[#040E1B] overflow-hidden">
+            <!-- Full Background -->
+            <img src="./assets/images/homepage/homepage-bg.webp"
+              class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
+
+            <div class="w-full h-full relative z-10">
+              <!-- Top Logo -->
+              <img src="../../assets/images/fisto-logo.png"
+                class="absolute top-[2%] left-[6%] w-[23%] object-contain pointer-events-none"
+                style="filter: brightness(0) invert(1);" />
+
+              <!-- Show Case -->
+              <img src="./assets/images/homepage/show-case.svg"
+                class="absolute top-[4%] right-[6%] w-[16%] object-contain pointer-events-none" />
+
+              <!-- Main Heading -->
+              <img src="./assets/images/homepage/we-introduce-text-content.svg"
+                class="absolute top-[15%] left-[6%] w-[62%] object-contain pointer-events-none" />
+
+              <!-- Description -->
+              <img src="./assets/images/homepage/intro-description.svg"
+                class="absolute top-[34%] left-[6%] w-[34%] object-contain pointer-events-none" />
+
+              <!-- Laptop Image -->
+              <img src="./assets/images/homepage/lap-image.webp"
+                class="absolute top-[35%] right-[0%] w-[75%] max-w-none object-contain pointer-events-none" />
+
+              <!-- Bottom Footer Bar -->
+              <div
+                class="absolute bottom-[0%] left-[0%] w-[100%] h-[7%] bg-[#121417] flex justify-between items-center z-20">
+                <div class="w-[78%] h-[100%] flex items-center pl-[6%] gap-[4%]">
+                  <!-- Website -->
+                  <div class="w-[25%] flex items-center h-[100%]">
+                    <a href="https://www.fist-o.com" target="_blank"
+                      class="pointer-events-auto cursor-pointer transition-transform hover:scale-105 w-[100%] flex items-center h-[100%]">
+                      <img src="./assets/images/homepage/website-text.svg" class="w-[100%] h-auto object-contain" />
+                    </a>
+                  </div>
+
+                  <!-- Separator -->
+                  <img src="./assets/images/homepage/bottom-gap.svg"
+                    class="h-[40%] w-auto object-contain pointer-events-none" />
+
+                  <!-- Email -->
+                  <div class="flex items-center gap-[6%] w-[35%] h-[100%]">
+                    <img src="./assets/images/homepage/email-icon.svg"
+                      class="h-[31.5%] w-auto object-contain pointer-events-none" />
+                    <div class="flex flex-col justify-center gap-[8%] w-[100%] h-[100%] pointer-events-auto">
+                      <a href="mailto:info@fist-o.com"
+                        class="transition-transform hover:scale-105 origin-left w-[100%] flex items-center">
+                        <img src="./assets/images/homepage/info-email-text.svg"
+                          class="w-[62.5%] h-auto object-contain" />
+                      </a>
+                      <a href="mailto:support@fist-o.com"
+                        class="transition-transform hover:scale-105 origin-left w-[100%] flex items-center">
+                        <img src="./assets/images/homepage/support-email-text.svg"
+                          class="w-[80%] max-w-none h-auto object-contain" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Separator -->
+                  <img src="./assets/images/homepage/bottom-gap-1.svg"
+                    class="h-[40%] w-auto object-contain pointer-events-none" />
+
+                  <!-- Phone -->
+                  <div class="flex items-center gap-[6%] w-[24%] h-[100%]">
+                    <img src="./assets/images/homepage/phone-icon.svg"
+                      class="h-[31.5%] w-auto object-contain pointer-events-none" />
+                    <div class="flex flex-col justify-center gap-[12%] w-[65%] h-[100%] pointer-events-auto">
+                      <a href="tel:9994425147"
+                        class="transition-transform hover:scale-105 origin-left w-[100%] flex items-center">
+                        <img src="./assets/images/homepage/phone-text-1.svg" class="w-[90%] h-auto object-contain" />
+                      </a>
+                      <a href="tel:7530025147"
+                        class="transition-transform hover:scale-105 origin-left w-[100%] flex items-center">
+                        <img src="./assets/images/homepage/phone-text-2.svg" class="w-[90%] h-auto object-contain" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Drag Here Corner -->
+                <img src="./assets/images/homepage/drag-here.svg"
+                  class="absolute right-[0%] bottom-[0%] h-[150%] w-[24%] object-contain object-right z-30 pointer-events-none"
+                  alt="Drag Here" />
+              </div>
+            </div>
+
+            <!-- Page Shadow (Right Page -> Shadow on Left) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-[0%] left-[-1%] h-[100%] shadow-mobile z-[30] pointer-events-none" />
           </div>
 
           <!-- *************************page 1 End**************************** -->
@@ -615,53 +704,60 @@
           <!-- *************************User Guide Page Start**************************** -->
           <div class="page relative bg-[#262626]">
             <!-- Background Image -->
-            <img src="./assets/images/user-guide/page-2-bg.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
-            
+            <img src="./assets/images/user-guide/page-2-bg.jpg"
+              class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
+
             <div class="w-full h-full flex flex-col justify-start items-start relative z-10 pt-[22%] px-[8%]">
-              
+
               <!-- Header -->
-              <img src="./assets/images/user-guide/user-guide-text.svg" class="w-[45%] object-contain mb-[12%] pointer-events-none" />
-              
+              <img src="./assets/images/user-guide/user-guide-text.svg"
+                class="w-[45%] object-contain mb-[12%] pointer-events-none" />
+
               <!-- Paragraphs -->
-              <img src="./assets/images/user-guide/user-guide-text-1.svg" class="w-[75%] object-contain mb-[7%] pointer-events-none" />
-              <img src="./assets/images/user-guide/user-guide-text-2.svg" class="w-[70%] object-contain mb-[7%] pointer-events-none" />
-              <img src="./assets/images/user-guide/user-guide-text-3.svg" class="w-[80%] object-contain mb-[7%] pointer-events-none" />
-              <img src="./assets/images/user-guide/user-guide-text-4.svg" class="w-[78%] object-contain pointer-events-none" />
-              
+              <img src="./assets/images/user-guide/user-guide-text-1.svg"
+                class="w-[75%] object-contain mb-[7%] pointer-events-none" />
+              <img src="./assets/images/user-guide/user-guide-text-2.svg"
+                class="w-[70%] object-contain mb-[7%] pointer-events-none" />
+              <img src="./assets/images/user-guide/user-guide-text-3.svg"
+                class="w-[80%] object-contain mb-[7%] pointer-events-none" />
+              <img src="./assets/images/user-guide/user-guide-text-4.svg"
+                class="w-[78%] object-contain pointer-events-none" />
+
             </div>
 
             <!-- Footer Logo -->
             <div class="absolute bottom-[4%] w-full flex justify-center z-20 pointer-events-none">
               <img src="./assets/images/user-guide/fisto-url.svg" class="w-[18%] object-contain" />
             </div>
-            
+
             <!-- Page Shadow (Left Page -> Shadow on Right) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 right-[-1%] h-[100%] rotate-180 shadow-mobile z-[30] pointer-events-none" />
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 right-0 h-[100%] -scale-x-100 shadow-mobile z-[30] pointer-events-none" />
           </div>
           <!-- *************************User Guide Page End**************************** -->
 
           <!-- *************************table of contents Start**************************** -->
           <div class="page bg-white relative">
-            <div class="w-full h-full flex flex-col justify-start items-start pt-[6%] px-[8%] relative">
+            <div class="w-full h-full flex flex-col justify-start items-start pt-[3%] px-[8%] relative">
               <!-- Top Logo -->
-              <div class="w-full flex justify-start mb-[3%]">
-                <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[18%] object-contain" />
+              <div class="w-full flex justify-start mb-[1.5%]">
+                <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain" />
               </div>
 
               <!-- Digital Catalogue Text -->
-              <div class="w-full flex justify-start mb-[3%]">
+              <div class="w-full flex justify-start mb-[1.5%]">
                 <img src="./assets/images/table-of-contents/digital-catalogue-text.svg" alt="Digital Catalogue"
-                  class="w-[80%] object-contain" />
+                  class="w-[75%] object-contain" />
               </div>
 
               <!-- Table of Contents Text -->
-              <div class="w-full flex justify-start mb-[2%]">
+              <div class="w-full flex justify-start mb-[1%]">
                 <img src="./assets/images/table-of-contents/table-of-content-text.svg" alt="Table of Contents"
-                  class="w-[45%] object-contain" />
+                  class="w-[42%] object-contain" />
               </div>
 
               <!-- List items -->
-              <div class="w-[95%] flex flex-col gap-[0.8vh] justify-start mt-[1%]">
+              <div class="w-[86%] flex flex-col gap-[1.25%] justify-start mt-[1.5%]">
                 <img src="./assets/images/table-of-contents/content-feature-1.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left"
                   data-page="4" />
@@ -692,9 +788,11 @@
               </div>
 
               <!-- Bottom Texts -->
-              <div class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end font-['Montserrat'] font-bold text-black text-[1vw] z-[20]">
-                <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">fist-o.com</a>
-                <span class="border-b-2 border-[#026DF9] pb-1 uppercase">PAGE <span class="text-[#026DF9]">3</span></span>
+              <div
+                class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 3</span>
               </div>
             </div>
           </div>
@@ -702,7 +800,8 @@
 
           <!-- *************************Feature 1 Start**************************** -->
           <div class="page relative bg-white">
-            <img src="./assets/images/features/features-bg.webp" class="absolute top-0 left-0 right-0 w-full h-auto object-contain z-0 pointer-events-none" />
+            <img src="./assets/images/features/features-bg.webp"
+              class="absolute top-0 left-0 right-0 w-full h-auto object-contain z-0 pointer-events-none" />
             <div class="w-full h-full flex flex-col justify-start items-start pt-[5%] px-[10%] relative z-10">
               <!-- Top Logo -->
               <div class="w-full flex justify-start mb-[3%]">
@@ -722,25 +821,29 @@
               </div>
 
               <!-- Bottom Image -->
-              <div class="w-full flex justify-center mt-[4.5%]">
+              <div class="w-full flex justify-center mt-[2.5%]">
                 <img src="./assets/images/features/feature-bottom-1.webp" alt="Feature Bottom"
-                  class="w-[66.5%] object-contain" />
+                  class="w-[50%] object-contain" />
               </div>
 
               <!-- Bottom Texts -->
-              <div class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end font-['Montserrat'] font-bold text-black text-[1vw] z-[20]">
-                <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">fist-o.com</a>
-                <span class="border-b-2 border-[#026DF9] pb-1 uppercase">PAGE <span class="text-[#026DF9]">4</span></span>
+              <div
+                class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 4</span>
               </div>
             </div>
-            <!-- Page Shadow (Right Page -> Shadow on Left) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+            <!-- Page Shadow (Left Page -> Shadow on Right) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 right-[-2%] h-[100%] rotate-180 shadow-mobile z-[30] pointer-events-none" />
           </div>
           <!-- *************************Feature 1 End**************************** -->
 
           <!-- *************************Feature 2 Start**************************** -->
           <div class="page relative bg-white">
-            <img src="./assets/images/features/features-bg.webp" class="absolute top-0 left-0 right-0 w-full h-auto object-contain z-0 pointer-events-none" />
+            <img src="./assets/images/features/features-bg.webp"
+              class="absolute top-0 left-0 right-0 w-full h-auto object-contain z-0 pointer-events-none" />
             <div class="w-full h-full flex flex-col justify-start items-start pt-[5%] px-[10%] relative z-10">
               <!-- Top Logo -->
               <div class="w-full flex justify-start mb-[3%]">
@@ -756,40 +859,46 @@
               <!-- Main Content -->
               <div class="w-full flex justify-start mb-[1%]">
                 <img src="./assets/images/features/feature-content-2.svg" alt="Feature Content"
-                  class="w-[70%] object-contain" />
+                  class="w-[62%] object-contain" />
               </div>
 
               <!-- Bottom Image -->
-              <div class="w-full flex justify-center mt-[8%]">
+              <div class="w-full flex justify-center mt-[2%]">
                 <img src="./assets/images/features/feature-bottom-2.webp" alt="Feature Bottom"
-                  class="w-[70%] object-contain" />
+                  class="w-[50%] object-contain" />
               </div>
 
               <!-- Bottom Texts -->
-              <div class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end font-['Montserrat'] font-bold text-black text-[1vw] z-[20]">
-                <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">fist-o.com</a>
-                <span class="border-b-2 border-[#026DF9] pb-1 uppercase">PAGE <span class="text-[#026DF9]">5</span></span>
+              <div
+                class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[1vw] z-[20]">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 5</span>
               </div>
             </div>
-            <!-- Page Shadow (Left Page -> Shadow on Right) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 right-[-2%] h-[100%] rotate-180 shadow-mobile z-[30] pointer-events-none" />
+            <!-- Page Shadow (Right Page -> Shadow on Left) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" 0.9 />
           </div>
           <!-- *************************Feature 2 End**************************** -->
 
           <!-- *************************About Us Start**************************** -->
           <div class="page relative bg-white">
             <div class="w-full h-full flex flex-col justify-start items-center pt-[5%] relative z-10">
-              
+
               <!-- Top Section: Logo, About Us, Vision/Mission -->
               <div class="w-full px-[7%] flex justify-between mb-[2.5%]">
                 <!-- Left Column -->
                 <div class="w-[51%] flex flex-col items-start justify-start">
-                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[35%] object-contain mb-[8%]" />
-                  <img src="./assets/images/about-us/about-top-left.svg" alt="About Us" class="w-[85%] object-contain" />
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo"
+                    class="w-[35%] object-contain mb-[8%]" />
+                  <img src="./assets/images/about-us/about-top-left.svg" alt="About Us"
+                    class="w-[85%] object-contain" />
                 </div>
                 <!-- Right Column -->
                 <div class="w-[55%] flex flex-col justify-end">
-                  <img src="./assets/images/about-us/about-top-right.svg" alt="Vision Mission" class="w-[95%] object-contain mb-[4%]" />
+                  <img src="./assets/images/about-us/about-top-right.svg" alt="Vision Mission"
+                    class="w-[95%] object-contain mb-[4%]" />
                 </div>
               </div>
 
@@ -800,8 +909,11 @@
 
               <!-- Video Section -->
               <div class="w-full relative flex h-[28%] bg-gray-200 overflow-hidden mb-[2%]">
-                <video src="./assets/images/about-us/about-video.mp4" autoplay loop muted playsinline class="w-[65%] h-full object-cover"></video>
-                <div class="absolute right-0 top-0 w-[45%] h-full bg-[#00AEEF] flex items-center justify-center pl-[10%]" style="clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);">
+                <video src="./assets/images/about-us/about-video.mp4" autoplay loop muted playsinline
+                  class="w-[65%] h-full object-cover"></video>
+                <div
+                  class="absolute right-0 top-0 w-[45%] h-full bg-[#00AEEF] flex items-center justify-center pl-[10%]"
+                  style="clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);">
                   <img src="./assets/images/about-us/our-team-text.svg" alt="Our Team" class="w-[85%] object-contain" />
                 </div>
               </div>
@@ -812,18 +924,21 @@
               </div>
 
               <!-- Bottom Texts -->
-              <div class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end font-['Montserrat'] font-bold text-black text-[1vw] z-[20]">
-                <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">fist-o.com</a>
-                <span class="border-b-2 border-[#026DF9] pb-1 uppercase">PAGE <span class="text-[#026DF9]">6</span></span>
+              <div
+                class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 6</span>
               </div>
             </div>
             <!-- Page Shadow (Right Page -> Shadow on Left) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
           </div>
           <!-- *************************About Us End**************************** -->
 
           <div class="page" style="display: flex; justify-content: center; align-items: center;">
-              Page 7
+            Page 7
           </div>
 
           <!-- *************************page 4 Start**************************** -->
@@ -946,9 +1061,11 @@
               </div>
             </div>
             <!-- Bottom Texts -->
-            <div class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end font-['Montserrat'] font-bold text-black text-[1vw] z-[20]">
-              <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">fist-o.com</a>
-              <span class="border-b-2 border-[#026DF9] pb-1 uppercase">PAGE <span class="text-[#026DF9]">7</span></span>
+            <div
+              class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+              <a href="https://www.fist-o.com" target="_blank"
+                class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+              <span>Page 7</span>
             </div>
 
             <!-- Page Shadow (Left Page -> Shadow on Right) -->
@@ -1098,9 +1215,9 @@
           <!-- *************************page 4 End**************************** -->
 
           <div class="page" style="display: flex; justify-content: center; align-items: center;">
-              Page 9
+            Page 9
           </div>
-          
+
 
           <!-- *************************page 3 Start**************************** -->
           <div class="page" id="page-3"
@@ -1126,46 +1243,167 @@
           </div>
 
           <div class="page" style="display: flex; justify-content: center; align-items: center;">
-              Page 11
+            Page 11
           </div>
 
-          <div class="page" style="display: flex; justify-content: center; align-items: center;">
-              Page 12 - video
-          </div>
+          <!-- *************************Page 12 Start**************************** -->
+          <div class="page relative bg-white">
+            <div class="w-full h-full flex flex-col relative z-10 pt-[5%] pb-[4%]">
+              
+              <div class="px-[10%] w-full flex-none">
+                <!-- Top Logo -->
+                <div class="w-full flex justify-start mb-[3%]">
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain" />
+                </div>
+                <!-- Header Text -->
+                <div class="w-full flex justify-start font-bold text-black text-[2.2vw] tracking-normal font-['Inter']">
+                  OUR PROJECT VIDEO
+                </div>
+              </div>
 
-          <div class="page" style="display: flex; justify-content: center; align-items: center;">
-              Page 13 - video
-          </div>
+              <!-- Video Container (Natural Height, Centered vertically) -->
+              <div class="w-full flex-grow flex items-center justify-end mt-[4%] mb-[6%] pl-[10%] pr-0 relative">
+                <div class="relative w-[66.5%]">
+                  <video id="project-vid-1" src="./assets/images/our-project-videos/idc-video-first-half.mp4" 
+                         class="w-full h-auto object-cover" playsinline></video>
+                  
+                  <!-- Left Page Controls (Play Button at Right Edge) -->
+                  <button onclick="playVideos()" class="absolute bottom-[3%] right-4 z-50 rounded-full w-12 h-12 border-[2px] border-white/70 bg-black/40 hover:bg-black/60 backdrop-blur-md transition-all flex items-center justify-center cursor-pointer shadow-lg hover:scale-110">
+                     <svg class="w-6 h-6 text-white fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </button>
+                </div>
+              </div>
 
-         
+              <!-- Bottom Texts -->
+              <div
+                class="px-[10%] w-full flex justify-between items-end font-['Inter'] font-bold text-black text-[1vw] z-[20] mt-auto flex-none">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 12</span>
+              </div>
+            </div>
+            
+            <!-- Page Shadow (Left Page -> Shadow on Right) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 right-[-2%] h-[100%] -scale-x-100 shadow-mobile z-[30] pointer-events-none" />
+          </div>
+          <!-- *************************Page 12 End**************************** -->
+
+          <!-- *************************Page 13 Start**************************** -->
+          <div class="page relative bg-white">
+            <div class="w-full h-full flex flex-col relative z-10 pt-[5%] pb-[4%]">
+              
+              <div class="px-[10%] w-full flex-none">
+                <!-- Top Logo -->
+                <div class="w-full flex justify-start mb-[3%]">
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain" />
+                </div>
+                <!-- Header Text -->
+                <div class="w-full flex justify-start font-bold text-black text-[2.2vw] tracking-normal font-['Inter']">
+                  OUR PROJECT VIDEO
+                </div>
+              </div>
+
+              <!-- Video Container (Natural Height, Centered vertically) -->
+              <div class="w-full flex-grow flex items-center justify-start mt-[4%] mb-[6%] pr-[10%] pl-0 relative">
+                <div class="relative w-[66.5%]">
+                  <video id="project-vid-2" src="./assets/images/our-project-videos/idc-video-second-half.mp4" 
+                         class="w-full h-auto object-cover" playsinline></video>
+                  
+                  <!-- Right Page Controls (Pause Button at Left Edge) -->
+                  <button onclick="pauseVideos()" class="absolute bottom-[3%] left-4 z-50 rounded-full w-12 h-12 border-[2px] border-white/70 bg-black/40 hover:bg-black/60 backdrop-blur-md transition-all flex items-center justify-center cursor-pointer shadow-lg hover:scale-110">
+                     <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Texts -->
+              <div
+                class="px-[10%] w-full flex justify-between items-end font-['Inter'] font-bold text-black text-[1vw] z-[20] mt-auto flex-none">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 13</span>
+              </div>
+            </div>
+
+            <script>
+              function playVideos() {
+                const vid1 = document.getElementById("project-vid-1");
+                const vid2 = document.getElementById("project-vid-2");
+                if (vid1 && vid2) {
+                  vid2.currentTime = vid1.currentTime;
+                  let p1 = vid1.play();
+                  let p2 = vid2.play();
+                  if (p1) p1.catch(e => console.log(e));
+                  if (p2) p2.catch(e => console.log(e));
+                }
+              }
+              
+              function pauseVideos() {
+                const vid1 = document.getElementById("project-vid-1");
+                const vid2 = document.getElementById("project-vid-2");
+                if (vid1 && vid2) {
+                  vid1.pause();
+                  vid2.pause();
+                }
+              }
+
+              // Enforce continuous sync to prevent drift
+              setInterval(() => {
+                const vid1 = document.getElementById("project-vid-1");
+                const vid2 = document.getElementById("project-vid-2");
+                if (vid1 && vid2 && !vid1.paused && !vid2.paused) {
+                  if (Math.abs(vid1.currentTime - vid2.currentTime) > 0.2) {
+                    vid2.currentTime = vid1.currentTime;
+                  }
+                }
+              }, 500);
+            </script>
+
+            <!-- Page Shadow (Right Page -> Shadow on Left) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+          </div>
+          <!-- *************************Page 13 End**************************** -->
+
+
 
           <!-- *************************page 8 End**************************** -->
 
           <!-- *************************Library Start**************************** -->
           <div class="page relative bg-[#F9F9F9]">
             <div class="w-full h-full relative z-10">
-              
+
               <!-- Top Header Section -->
               <div class="absolute top-[4%] left-[7%] w-[80%] flex flex-col items-start z-20">
                 <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[20%] object-contain mb-[4%]" />
-                <img src="./assets/images/libarary/library-text.svg" alt="Library" class="h-auto w-[56%] object-contain mb-[3%]" />
-                <img src="./assets/images/libarary/library-subtext.svg" alt="Library Subtext" class="w-[67%] object-contain" />
+                <img src="./assets/images/libarary/library-text.svg" alt="Library"
+                  class="h-auto w-[56%] object-contain mb-[3%]" />
+                <img src="./assets/images/libarary/library-subtext.svg" alt="Library Subtext"
+                  class="w-[67%] object-contain" />
               </div>
 
               <!-- Shelf 1 -->
               <div class="absolute top-[29%] left-[9%] w-[80%] z-20 scale-[0.85]">
                 <div class="absolute bottom-[39%] left-[5%] w-[90%] flex justify-between items-end z-30">
-                  <a href="#" target="_blank" class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                  <a href="#" target="_blank"
+                    class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <img src="./assets/images/libarary/book-shelf-1-ttp.webp" class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank" class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-1-4m-packs.webp" class="w-full h-auto drop-shadow-xl" />
+                  <a href="#" target="_blank"
+                    class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-1-4m-packs.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank" class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-1-rk-poly.webp" class="w-full h-auto drop-shadow-xl" />
+                  <a href="#" target="_blank"
+                    class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-1-rk-poly.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank" class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-1-eco-energy.webp" class="w-full h-auto drop-shadow-xl" />
+                  <a href="#" target="_blank"
+                    class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-1-eco-energy.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
                 </div>
                 <img src="./assets/images/libarary/image 358.webp" class="w-full h-auto relative z-20" />
@@ -1174,15 +1412,21 @@
               <!-- Shelf 2 -->
               <div class="absolute top-[48.5%] left-[9%] w-[80%] z-20 scale-[0.85]">
                 <div class="absolute bottom-[39%] left-[12.5%] w-[75%] flex justify-center gap-[5.5%] items-end z-30">
-                  <a href="#" target="_blank" class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-2-airlock.webp" class="w-full h-auto drop-shadow-xl" />
+                  <a href="#" target="_blank"
+                    class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-2-airlock.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank" class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                  <a href="#" target="_blank"
+                    class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <!-- Niagara Book -->
-                    <img src="./assets/images/libarary/book-shelf-2-niagara.webp" class="w-full h-auto drop-shadow-xl" />
+                    <img src="./assets/images/libarary/book-shelf-2-niagara.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank" class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-2-vengo-pumps.webp" class="w-full h-auto drop-shadow-xl" />
+                  <a href="#" target="_blank"
+                    class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-2-vengo-pumps.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
                 </div>
                 <img src="./assets/images/libarary/image 358-1.webp" class="w-full h-auto relative z-20" />
@@ -1191,12 +1435,16 @@
               <!-- Shelf 3 -->
               <div class="absolute top-[67%] left-[9%] w-[80%] z-20 scale-[0.85]">
                 <div class="absolute bottom-[39%] left-[12.5%] w-[75%] flex justify-center gap-[9%] items-end z-30">
-                  <a href="#" target="_blank" class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-3-airlock.webp" class="w-full h-auto drop-shadow-xl" />
+                  <a href="#" target="_blank"
+                    class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-3-airlock.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
-                 
-                  <a href="#" target="_blank" class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
-                    <img src="./assets/images/libarary/book-shelf-3-bestomech.webp" class="w-full h-auto drop-shadow-xl" />
+
+                  <a href="#" target="_blank"
+                    class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
+                    <img src="./assets/images/libarary/book-shelf-3-bestomech.webp"
+                      class="w-full h-auto drop-shadow-xl" />
                   </a>
                 </div>
                 <img src="./assets/images/libarary/image 358-2.webp" class="w-full h-auto relative z-20" />
@@ -1208,64 +1456,176 @@
               </div>
 
               <!-- Bottom Texts -->
-              <div class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end font-['Montserrat'] font-bold text-black text-[1vw] z-[20]">
-                <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">fist-o.com</a>
-                <span class="border-b-2 border-[#026DF9] pb-1 uppercase">PAGE <span class="text-[#026DF9]">10</span></span>
+              <div
+                class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span>Page 10</span>
               </div>
             </div>
 
-            <!-- Page Shadow (Right Page -> Shadow on Left) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+            <!-- Page Shadow (Left Page -> Shadow on Right) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 right-[-2%] h-[100%] -scale-x-100 shadow-mobile z-[30] pointer-events-none" />
           </div>
           <!-- *************************Library End**************************** -->
 
           <!-- *************************Thank You Page Start**************************** -->
-          <div class="page relative bg-[#111111]">
+          <div class="page relative ">
             <!-- Background Image -->
-            <img src="./assets/images/thankyou/thankyou-bg.webp" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
-            
-            <div class="w-full h-full flex flex-col justify-start items-center relative z-10 pt-[5%] px-[10%]">
-              
+            <img src="./assets/images/thankyou/thankyou-bg.jpg"
+              class="absolute inset-0 w-full h-full object-cover object-[0%_7%] z-0 pointer-events-none" />
+
+            <div class="w-full h-full flex flex-col justify-start items-center relative z-10 pt-[3%] pb-[4%] px-[5%]">
+
               <!-- Top Left Logo -->
-              <div class="w-full flex justify-start mb-[12%]">
-                <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[20%] object-contain invert brightness-0 pointer-events-none" />
+              <div class="w-full flex justify-start mb-[19%]">
+                <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo"
+                  class="w-[18%] object-contain invert brightness-0 pointer-events-none" />
               </div>
 
               <!-- Main Content -->
-              <div class="flex flex-col items-center w-full">
+              <div class="flex flex-col items-center w-full ml-[-6%]">
                 <!-- Thank You Title -->
-                <img src="./assets/images/thankyou/thank-you-text.svg" class="w-[65%] object-contain mb-[5%] pointer-events-none" />
-                
+                <img src="./assets/images/thankyou/thank-you-text.svg"
+                  class="w-[55%] object-contain mb-[6%] pointer-events-none" />
+
                 <!-- Explore Subtitle -->
-                <img src="./assets/images/thankyou/explore-interactive-text.svg" class="w-[85%] object-contain mb-[5%] pointer-events-none" />
+                <img src="./assets/images/thankyou/explore-interactive-text.svg"
+                  class="w-[75%] object-contain mb-[5%] pointer-events-none" />
 
                 <!-- Description Text -->
-                <img src="./assets/images/thankyou/description-text.svg" class="w-[65%] object-contain mb-[12%] pointer-events-none" />
+                <img src="./assets/images/thankyou/description-text.svg"
+                  class="w-[55%] object-contain mb-[10%] pointer-events-none" />
 
                 <!-- Lets Discuss Card -->
-                <a href="#" target="_blank" class="w-[85%] hover:scale-105 transition-transform mb-[10%] z-20 pointer-events-auto">
-                  <img src="./assets/images/thankyou/lets-discuss-card.svg" class="w-full h-auto drop-shadow-xl border-[0.5px] border-[#6f6d6d] rounded-[10px]" />
+                <a href="#" target="_blank"
+                  class="w-[75%] hover:scale-105 transition-transform z-20 pointer-events-auto mb-[10%]">
+                  <img src="./assets/images/thankyou/lets-discuss-card.svg"
+                    class="w-full h-auto drop-shadow-xl border-[0.5px] border-[#6f6d6d] rounded-[10px]" />
                 </a>
 
                 <!-- Social Icons -->
-                <div class="flex justify-center gap-[5%] w-full z-20 pointer-events-auto mt-[4%]">
-                  <a href="#" target="_blank" class="w-[8.5%] hover:scale-110 transition-transform"><img src="./assets/images/thankyou/linked-in-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="#" target="_blank" class="w-[8.5%] hover:scale-110 transition-transform"><img src="./assets/images/thankyou/facebook-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="#" target="_blank" class="w-[8.5%] hover:scale-110 transition-transform"><img src="./assets/images/thankyou/instagram-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="#" target="_blank" class="w-[8.5%] hover:scale-110 transition-transform"><img src="./assets/images/thankyou/youtube-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
+                <div class="flex justify-center gap-[4%] w-full z-20 pointer-events-auto mb-[3%]">
+                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                      src="./assets/images/thankyou/linked-in-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
+                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                      src="./assets/images/thankyou/facebook-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
+                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                      src="./assets/images/thankyou/instagram-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
+                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                      src="./assets/images/thankyou/youtube-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
                 </div>
+
+                <!-- URL -->
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="text-white font-['Montserrat'] font-semibold text-[0.85vw] hover:text-[#026DF9] transition-colors pointer-events-auto z-20 tracking-wider">www.fist-o.com</a>
               </div>
-              
+
             </div>
-            
+
             <!-- Page Shadow (Right Page -> Shadow on Left) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 left-0 h-[100%] shadow-mobile z-[30] pointer-events-none" />
           </div>
           <!-- *************************Thank You Page End**************************** -->
 
-            <div class="page" style="display: flex; justify-content: center; align-items: center;">
-              Page 16 - contact
+          <!-- *************************Contact Page Start**************************** -->
+          <div class="page relative bg-[#111111]">
+            <!-- Background Image -->
+            <img src="./assets/images/contact-page/contact-bg.webp"
+              class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
+
+            <div class="w-full h-full flex flex-col items-center relative z-10 pt-[6%] px-[10%]">
+
+              <!-- Top Quotes -->
+              <img src="./assets/images/contact-page/top-quotes.svg"
+                class="w-[75%] object-contain mb-[4%] pointer-events-none" />
+
+              <!-- Fisto Logo -->
+              <img src="../../assets/images/fisto-logo.png" class="w-[36%] object-contain mb-[6%] pointer-events-none"
+                style="filter: brightness(0) invert(1);" />
+
+              <!-- White Card -->
+              <div
+                class="w-full border-[0.15px] border-white rounded-[2.5vw] flex flex-col items-center pt-[7%] pb-[5%] px-[6%] relative shadow-2xl">
+
+                <!-- Get in touch -->
+                <img src="./assets/images/contact-page/get-in-touch-text.svg"
+                  class="w-[38%] object-contain mb-[7%] pointer-events-none" />
+
+                <!-- Address -->
+                <a href="https://maps.google.com/?q=10/11,+Trichy+Rd,+Sundaram+Brothers+Layout,+Ramanathapuram,+Coimbatore+-+641045,+Tamil+Nadu,+India"
+                  target="_blank" class="w-[68%] mb-[7%] hover:scale-105 transition-transform flex justify-center">
+                  <img src="./assets/images/contact-page/address-text.svg"
+                    class="w-full object-contain pointer-events-none" />
+                </a>
+
+                <!-- Emails Row -->
+                <div class="flex items-center justify-center gap-[6%] w-full mb-[5%]">
+                  <a href="mailto:info@fist-o.com"
+                    class="flex items-center justify-end w-[50%] hover:scale-105 transition-transform origin-right">
+                    <img src="./assets/images/contact-page/info-gmail-text.svg" class="w-[75%] object-contain" />
+                  </a>
+                  <img src="./assets/images/contact-page/email-divider-line.svg" class="h-[1.5vw] object-contain" />
+                  <a href="mailto:support@fist-o.com"
+                    class="flex items-center justify-start w-[50%] hover:scale-105 transition-transform origin-left">
+                    <img src="./assets/images/contact-page/support-gmail-text.svg" class="w-[85%] object-contain" />
+                  </a>
+                </div>
+
+                <!-- Phones Row -->
+                <div class="flex items-center justify-center gap-[6%] w-full mb-[6%]">
+                  <a href="tel:9994425147"
+                    class="flex items-center justify-end w-[45%] hover:scale-105 transition-transform origin-right">
+                    <img src="./assets/images/contact-page/phone-number-text-1.svg" class="w-[62%] object-contain" />
+                  </a>
+                  <img src="./assets/images/contact-page/phone-divider-line.svg" class="h-[1.5vw] object-contain" />
+                  <a href="tel:7530025147"
+                    class="flex items-center justify-start w-[45%] hover:scale-105 transition-transform origin-left">
+                    <img src="./assets/images/contact-page/phone-number-text-2.svg" class="w-[62%] object-contain" />
+                  </a>
+                </div>
+
+                <!-- Horizontal Divider -->
+                <img src="./assets/images/contact-page/horizontal%20divider.svg"
+                  class="w-[85%] object-contain mt-[3%] mb-[7%]" />
+
+                <!-- Bottom Row (Socials & QR) -->
+                <div class="flex items-center justify-between w-[95%]">
+                  <!-- Socials -->
+                  <div class="flex flex-col items-center w-[65%]">
+                    <img src="./assets/images/contact-page/followus-text.svg" class="w-[50%] object-contain mb-[7%]" />
+                    <div class="flex items-center justify-center gap-[8%] w-[85.5%]">
+                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                          src="./assets/images/contact-page/youtube-icon.svg" class="w-full object-contain" /></a>
+                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                          src="./assets/images/contact-page/instagram-icon.svg" class="w-full object-contain" /></a>
+                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                          src="./assets/images/contact-page/linkedin-icon.svg" class="w-full object-contain" /></a>
+                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                          src="./assets/images/contact-page/facebook-icon.svg" class="w-full object-contain" /></a>
+                    </div>
+                  </div>
+
+                  <!-- Vertical Divider -->
+                  <img src="./assets/images/contact-page/card-bottom-vertical-dvidier.svg"
+                    class="h-[6vw] object-contain" />
+
+                  <!-- QR Code -->
+                  <div class="flex flex-col items-center w-[45%]">
+                    <img src="./assets/images/contact-page/qr-code.svg" class="w-[32%] object-contain mb-[5%]" />
+                    <img src="./assets/images/contact-page/scan-to-visit-side.svg" class="w-[50%] object-contain" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Page Shadow (Left Page -> Shadow on Right) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-[0%] right-[-1%] h-[100%] rotate-180 shadow-mobile z-[30] pointer-events-none" />
           </div>
+          <!-- *************************Contact Page End**************************** -->
 
 
           <a ignore="1" class="ui-arrow-control ui-arrow-next-page">
