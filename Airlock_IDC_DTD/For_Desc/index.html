@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -354,8 +354,9 @@
 
         <!-- Center: page number -->
         <!-- <p class="mob-page-label ">Page <span id="mob-page-no">1</span></p> -->
-        <img src="../global-assets/Airlock-Logo.gif" alt="logo" class=" w-[100px] z-[11111] cursor-pointer tb-link"
-          data-page="1" />
+        <!-- make the logo white image -->
+        <img src="../../assets/images/fisto-logo.png" alt="logo"
+          class=" w-[100px] z-[11111] cursor-pointer tb-link invert brightness-200" data-page="1" />
 
         <!-- Right: three dots -->
         <button id="mobileDotsBtn" class="mob-icon-btn mob-dots-btn" aria-label="More options">
@@ -605,7 +606,7 @@
 
           <!-- *************************page 1 Start**************************** -->
 
-          <div class="page relative bg-[#040E1B] overflow-hidden">
+          <div class="page hard relative bg-[#040E1B] overflow-hidden">
             <!-- Full Background -->
             <img src="./assets/images/homepage/homepage-bg.webp"
               class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
@@ -882,63 +883,91 @@
           </div>
           <!-- *************************Feature 2 End**************************** -->
 
-          <!-- *************************About Us Start**************************** -->
           <div class="page relative bg-white">
-            <div class="w-full h-full flex flex-col justify-start items-center pt-[5%] relative z-10">
-
-              <!-- Top Section: Logo, About Us, Vision/Mission -->
-              <div class="w-full px-[7%] flex justify-between mb-[2.5%]">
-                <!-- Left Column -->
-                <div class="w-[51%] flex flex-col items-start justify-start">
-                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo"
-                    class="w-[35%] object-contain mb-[8%]" />
-                  <img src="./assets/images/about-us/about-top-left.svg" alt="About Us"
-                    class="w-[85%] object-contain" />
-                </div>
-                <!-- Right Column -->
-                <div class="w-[55%] flex flex-col justify-end">
-                  <img src="./assets/images/about-us/about-top-right.svg" alt="Vision Mission"
-                    class="w-[95%] object-contain mb-[4%]" />
-                </div>
+              <!-- Logo -->
+              <div class="absolute top-[4%] left-[6%] z-[2]">
+                <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[100%] object-contain" style="width: clamp(60px, 15%, 120px);" />
               </div>
+
+              <!-- Top Left Content -->
+              <img src="./assets/images/about-us/about-top-left-content.svg" alt="About Us"
+                class="absolute top-[10%] left-[10%] w-[29%] object-contain" />
+
+              <!-- Top Right Content -->
+              <img src="./assets/images/about-us/about-top-right.svg" alt="Vision and Mission"
+                class="absolute top-[10%] right-[8%] w-[42%] object-contain" />
 
               <!-- Project Count -->
-              <div class="w-full px-[8%] flex justify-center mb-[4%]">
-                <img src="./assets/images/about-us/project-count-text.svg" alt="Stats" class="w-[85%] object-contain" />
-              </div>
+              <img src="./assets/images/about-us/about-project-count.svg" alt="Project Stats"
+                class="absolute top-[35%] left-[50%] -translate-x-1/2 w-[84%] object-contain" />
 
-              <!-- Video Section -->
-              <div class="w-full relative flex h-[28%] bg-gray-200 overflow-hidden mb-[2%]">
-                <video src="./assets/images/about-us/about-video.mp4" autoplay loop muted playsinline
-                  class="w-[65%] h-full object-cover"></video>
-                <div
-                  class="absolute right-0 top-0 w-[45%] h-full bg-[#00AEEF] flex items-center justify-center pl-[10%]"
-                  style="clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);">
-                  <img src="./assets/images/about-us/our-team-text.svg" alt="Our Team" class="w-[85%] object-contain" />
-                </div>
-              </div>
+              <!-- Our Solution Text -->
+              <img src="./assets/images/about-us/about-our-solution-text.svg" alt="Our Solutions"
+                class="absolute top-[49%] left-[50%] -translate-x-1/2 w-[35%] object-contain" />
 
-              <!-- Bottom Quotes -->
-              <div class="w-full px-[10%] flex justify-start mb-[8%] mt-auto">
-                <img src="./assets/images/about-us/bottom-quotes.svg" alt="Quote" class="w-[80%] object-contain" />
-              </div>
+              <!-- Our Solution Cards -->
+              <img src="./assets/images/about-us/about-our-solution-cards.svg" alt="Solutions Cards"
+                class="absolute top-[57%] left-[50%] -translate-x-1/2 w-[83%] object-contain" />
+
+              <!-- Bottom Caption -->
+              <img src="./assets/images/about-us/about-bottom-caption.svg" alt="Bottom Caption"
+                class="absolute bottom-[8%] left-[50%] -translate-x-1/2 w-[65%] object-contain" />
 
               <!-- Bottom Texts -->
               <div
-                class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+                class="absolute bottom-[3%] left-[6%] right-[6%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
                 <a href="https://www.fist-o.com" target="_blank"
                   class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
-                <span>Page 6</span>
+                <span class="">Page 06</span>
               </div>
-            </div>
-            <!-- Page Shadow (Right Page -> Shadow on Left) -->
-            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
-              class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
-          </div>
-          <!-- *************************About Us End**************************** -->
 
-          <div class="page" style="display: flex; justify-content: center; align-items: center;">
-            Page 7
+              <!-- Page Shadow (Right Page -> Shadow on Left) -->
+              <!-- <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+                class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" /> -->
+          </div>
+          
+          <!-- ************************* Industries We Serve Start **************************** -->
+          <div class="page relative bg-white overflow-hidden">
+              <!-- Background -->
+              <img src="./assets/images/industries-we-serve/background-img.webp" alt="background"
+                class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
+
+              <!-- Logo -->
+              <div class="absolute top-[4%] left-[6%] z-[25]">
+                <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="object-contain" style="width: clamp(60px, 15%, 120px);" />
+              </div>
+
+              <!-- Top Right Laptop Image -->
+              <img src="./assets/images/industries-we-serve/industries-top-right-img.webp" alt="Laptop Preview"
+                class="absolute top-0 right-[-2%] w-[52%] object-contain z-10 pointer-events-none" />
+
+              <!-- Top Left Text -->
+              <img src="./assets/images/industries-we-serve/industries-top-left-text.svg" alt="Smart Digital Solutions"
+                class="absolute top-[13%] left-[6%] w-[42%] object-contain z-20" />
+
+              <!-- Industries We Serve Title -->
+              <img src="./assets/images/industries-we-serve/industries-we-serve-text.svg" alt="Industries We Serve"
+                class="absolute top-[47%] left-[50%] -translate-x-1/2 w-[55%] object-contain z-20" />
+
+              <!-- Industry Icons -->
+              <img src="./assets/images/industries-we-serve/industries-we-serve-icons.svg" alt="Industries Icons"
+                class="absolute top-[47.5%] left-[50%] -translate-x-1/2 w-[92%] object-contain z-20" />
+
+              <!-- Bottom Features -->
+              <img src="./assets/images/industries-we-serve/industries-bottom-icons.svg" alt="Features"
+                class="absolute bottom-[7%] left-[50%] -translate-x-1/2 w-[85%] object-contain z-20" />
+
+              <!-- Bottom Texts -->
+              <div
+                class="absolute bottom-[3%] left-[6%] right-[6%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
+                <a href="https://www.fist-o.com" target="_blank"
+                  class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+                <span class="">Page 07</span>
+              </div>
+
+              <!-- Page Shadow (Right Page -> Shadow on Left) -->
+              <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+                class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
           </div>
 
           <!-- *************************page 4 Start**************************** -->
@@ -1065,7 +1094,7 @@
               class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
               <a href="https://www.fist-o.com" target="_blank"
                 class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
-              <span>Page 7</span>
+              <span>Page 08</span>
             </div>
 
             <!-- Page Shadow (Left Page -> Shadow on Right) -->
@@ -1214,37 +1243,318 @@
           </div>
           <!-- *************************page 4 End**************************** -->
 
-          <div class="page" style="display: flex; justify-content: center; align-items: center;">
-            Page 9
-          </div>
+          <!-- *************************Water Bottle (Page 9) Start**************************** -->
+          <div class="page relative bg-white overflow-hidden">
+            <style>
+              .wb-card-wrapper {
+                position: absolute;
+                width: 33%;
+                height: 90%;
+                top: 5%;
+                transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+                cursor: pointer;
+                object-fit: contain;
+                border-radius: 6%;
+              }
 
+              .wb-card-center {
+                z-index: 10;
+                transform: translateX(-50%) scale(1.15);
+                left: 50%;
+                opacity: 1;
+                background-color: #F8F9FB;
+                border: thin solid #003CAA;
+              }
 
-          <!-- *************************page 3 Start**************************** -->
-          <div class="page" id="page-3"
-            style="position: relative; overflow: hidden; background-color: #ffffff; display: flex; flex-direction: column;">
+              .wb-card-left {
+                z-index: 5;
+                transform: translateX(-50%) scale(1.035);
+                left: 20%;
+                opacity: 0.9;
+                background-color: #D4E8FD;
+                border: thin solid #FFFFFF;
+              }
 
-            <!-- Top White Bar with Logo -->
-            <div class="w-[100%] flex items-center" style="padding: 2% 0 1% 4%;">
-              <img src="../../assets/images/fisto-logo.png" alt="FISTO Logo" class="w-[20%]" />
+              .wb-card-right {
+                z-index: 5;
+                transform: translateX(-50%) scale(1.035);
+                left: 80%;
+                opacity: 0.9;
+                background-color: #D4E8FD;
+                border: thin solid #FFFFFF;
+              }
+            </style>
+
+            <!-- Background Image -->
+            <img id="wb-bg" src="./assets/images/water-bottle/500ml/500ml-background-img.webp"
+              class="absolute w-[100%] h-[100%] top-[0%] left-[0%] object-cover" data-base="" />
+
+            <!-- Logo -->
+            <img src="../../assets/images/fisto-logo.png" alt="logo"
+              class="absolute w-[18%] top-[4%] left-[4%] z-[2]" />
+
+            <!-- Left Content (Title, Description, Ideal For) -->
+            <img id="wb-left" src="./assets/images/water-bottle/500ml/500ml-left-content.svg"
+              class="absolute w-[45%] top-[15%] left-[0%] z-[2]" data-base="translate(0, 0)" />
+
+            <!-- Product Image -->
+            <img id="wb-img" src="./assets/images/water-bottle/500ml/500ml-bottle-img.webp"
+              class="absolute w-[36%] top-[6.5%] right-[16%] z-[2]" data-base="translate(0, 0)" />
+
+            <!-- Right Icons -->
+            <img id="wb-right" src="./assets/images/water-bottle/500ml/500ml-right-icons.svg"
+              class="absolute w-[12%] top-[12%] right-[3%] z-[2]" data-base="translate(0, 0)" />
+
+            <!-- Center Measurements -->
+            <img id="wb-center" src="./assets/images/water-bottle/500ml/500ml-center-measurements.svg"
+              class="absolute w-[100%] bottom-[20%] left-[0%] z-[2]" data-base="translate(0, 0)" />
+
+            <!-- Pagination area -->
+            <div class="absolute bottom-[3.5%] left-[5%] right-[5%] h-[14%] flex flex-row items-center justify-center gap-[4%] z-[10]">
+              <!-- Left Button -->
+              <div id="wb-prev"
+                class="bg-white rounded-[50%] w-[5%] aspect-square flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 z-[20]">
+                <i class="fa-solid fa-chevron-left text-[80%] text-gray-700"></i>
+              </div>
+
+              <!-- Cards Container (Light Blue Background) -->
+              <div class="relative w-[45%] h-[100%] overflow-visible" id="wb-cards-container">
+                <img id="wb-card-0" src="./assets/images/water-bottle/500ml/500ml-bottom-card-img.svg"
+                  class="wb-card-wrapper wb-card-center" />
+                <img id="wb-card-1" src="./assets/images/water-bottle/1ltr/1ltr-bottom-card-img.svg"
+                  class="wb-card-wrapper wb-card-right" />
+                <img id="wb-card-2" src="./assets/images/water-bottle/2ltr/2ltr-bottom-card-img.svg"
+                  class="wb-card-wrapper wb-card-left" />
+              </div>
+
+              <!-- Right Button -->
+              <div id="wb-next"
+                class="bg-white rounded-[50%] w-[5%] aspect-square flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 z-[20]">
+                <i class="fa-solid fa-chevron-right text-[80%] text-gray-700"></i>
+              </div>
             </div>
 
-            <!-- Flow Meter Top Section -->
-            <div class="w-[100%] flex-none">
-              <img src="./assets/images/flow-meter/flow-meter-top.svg" alt="Flow Meter Top"
-                class="w-[100%] h-auto block" />
+            <!-- Bottom Texts -->
+            <div class="absolute bottom-[2%] left-[7.5%] right-[7.5%] flex justify-between items-end text-black text-[0.9vw] z-[20]">
+              <a href="https://www.fist-o.com" target="_blank"
+                class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+              <span>Page 09</span>
             </div>
 
-            <!-- Flow Meter Content Section -->
-            <div class="w-[100%] flex-none">
-              <img src="./assets/images/flow-meter/para-content.svg" alt="Flow Meter Content"
-                class="w-[100%] h-auto block" />
+            <!-- Page Shadow (Right Page -> Shadow on Left) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
+              class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+
+            <script>
+              (function () {
+                const capacities = ['500ml', '1ltr', '2ltr'];
+                let currentIndex = 0;
+                let timer = null;
+
+                const animConfig = [
+                  { el: document.getElementById('wb-bg'), delay: '0s', slideY: 0 },
+                  { el: document.getElementById('wb-img'), delay: '0.1s', slideY: 20 },
+                  { el: document.getElementById('wb-left'), delay: '0.2s', slideX: -20, slideY: 0 },
+                  { el: document.getElementById('wb-right'), delay: '0.3s', slideX: 20, slideY: 0 },
+                  { el: document.getElementById('wb-center'), delay: '0.4s', slideY: 15 }
+                ];
+
+                const cards = [
+                  document.getElementById('wb-card-0'),
+                  document.getElementById('wb-card-1'),
+                  document.getElementById('wb-card-2')
+                ];
+
+                function updateView(index) {
+                  currentIndex = index;
+                  const cap = capacities[index];
+                  const basePath = './assets/images/water-bottle/' + cap;
+
+                  // Fade out
+                  animConfig.forEach(item => {
+                    if (item.el) {
+                      item.el.style.transition = 'all 0.3s ease-out';
+                      item.el.style.opacity = 0;
+                      const base = item.el.getAttribute('data-base') || '';
+                      const y = item.slideY || 0;
+                      const x = item.slideX || 0;
+                      if (base) {
+                        item.el.style.transform = `translate(calc(-50% + ${x}px), ${y}px)`;
+                      } else {
+                        item.el.style.transform = `translate(${x}px, ${y}px)`;
+                      }
+                    }
+                  });
+
+                  setTimeout(() => {
+                    const elBg = document.getElementById('wb-bg');
+                    const elImg = document.getElementById('wb-img');
+                    const elLeft = document.getElementById('wb-left');
+                    const elRight = document.getElementById('wb-right');
+                    const elCenter = document.getElementById('wb-center');
+
+                    if (elBg) elBg.src = basePath + '/' + cap + '-background-img.webp';
+                    if (elImg) elImg.src = basePath + '/' + cap + '-bottle-img.webp';
+                    if (elLeft) elLeft.src = basePath + '/' + cap + '-left-content.svg';
+                    if (elRight) elRight.src = basePath + '/' + cap + '-right-icons.svg';
+                    if (elCenter) elCenter.src = basePath + '/' + cap + '-center-measurements.svg';
+
+                    // Fade in staggered
+                    animConfig.forEach(item => {
+                      if (item.el) {
+                        item.el.style.transition = `all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) ${item.delay}`;
+                        item.el.style.opacity = 1;
+                        const base = item.el.getAttribute('data-base') || '';
+                        if (base) {
+                          item.el.style.transform = base;
+                        } else {
+                          item.el.style.transform = 'translate(0, 0)';
+                        }
+                      }
+                    });
+                  }, 300);
+
+                  cards.forEach((card, i) => {
+                    if (!card) return;
+                    card.className = 'wb-card-wrapper';
+                    if (i === index) {
+                      card.classList.add('wb-card-center');
+                    } else if (i === (index - 1 + 3) % 3) {
+                      card.classList.add('wb-card-left');
+                    } else {
+                      card.classList.add('wb-card-right');
+                    }
+                  });
+
+                  resetTimer();
+                }
+
+                function next() {
+                  updateView((currentIndex + 1) % 3);
+                }
+
+                function prev() {
+                  updateView((currentIndex - 1 + 3) % 3);
+                }
+
+                function resetTimer() {
+                  if (timer) clearInterval(timer);
+                  timer = setInterval(next, 10000);
+                }
+
+                const btnPrev = document.getElementById('wb-prev');
+                const btnNext = document.getElementById('wb-next');
+                if (btnPrev) btnPrev.addEventListener('click', prev);
+                if (btnNext) btnNext.addEventListener('click', next);
+
+                cards.forEach((card, i) => {
+                  if (card) card.addEventListener('click', () => {
+                    if (i !== currentIndex) updateView(i);
+                  });
+                });
+
+                resetTimer();
+              })();
+            </script>
+          </div>
+          <!-- *************************Water Bottle (Page 9) End**************************** -->
+
+
+          <!-- *************************Flow Meter (Page 10) Start**************************** -->
+          <div class="page relative bg-white">
+            <div class="w-full h-full flex flex-col relative z-10 pt-[3%] pb-[3%]">
+              
+              <!-- Header with Logo -->
+              <div class="w-full flex justify-start px-[4.5%] mb-[0%]">
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain" />
+              </div>
+
+              <!-- Top Section (Dark Background) -->
+              <div class="w-full  bg-[#4a4a4a] mt-[2%] mb-[1%] relative">
+                <div class="w-full flex items-center px-[4%] relative ml-[3%]">
+                  <!-- Left Flow Meter inside White Box -->
+                  <div class="w-[33%] bg-white rounded-3xl shadow-2xl p-[2%] -mt-[5%] -mb-[5%] relative z-20 flex items-center justify-center border border-gray-100">
+                    <img src="./assets/images/flow-meter/flow-meter-product-top-left.webp" class="w-full object-contain" />
+                  </div>
+                  <!-- Right Text -->
+                  <div class="w-[48%] ml-[6%] py-[2%]">
+                    <img src="./assets/images/flow-meter/flow-meter-top-right-text.svg" class="w-full object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Middle Section -->
+              <div class="w-full px-[0%] flex justify-center gap-[3%] items-start flex-grow mb-[0%] mt-[1%]">
+                <div class="w-[33%]">
+                  <img src="./assets/images/flow-meter/flow-meter-left-image-content.svg" class="w-full object-contain" />
+                </div>
+                <div class="w-[48%] pt-[1%]">
+                  <img src="./assets/images/flow-meter/flow-meter-introduction.svg" class="w-full object-contain" />
+                </div>
+              </div>
+
+              <!-- Bottom Icons -->
+              <div class="w-full px-[8%] mb-[2%]">
+                <img src="./assets/images/flow-meter/flow-meter-bottom-icons.svg" class="w-[98%] object-contain" />
+              </div>
+
+              <!-- Bottom Texts (Absolute positioned) -->
             </div>
 
-          </div>
+            <div class="absolute bottom-[3%] left-[8%] right-[8%] flex justify-between items-end text-black text-[0.9vw] z-[50]">
+              <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+              <span>Page 10</span>
+            </div>
 
-          <div class="page" style="display: flex; justify-content: center; align-items: center;">
-            Page 11
+            <!-- Page Shadow (Left Page -> Shadow on Right) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 right-[-2%] h-[100%] -scale-x-100 shadow-mobile z-[30] pointer-events-none" />
           </div>
+          <!-- *************************Flow Meter (Page 10) End**************************** -->
+
+          <!-- *************************Flow Meter Table (Page 11) Start**************************** -->
+          <div class="page relative bg-white">
+            <div class="w-full h-full flex flex-col relative z-10 pt-[3%] pb-[3%] ml-[3%]">
+              
+              <!-- Header with Logo -->
+              <div class="w-full flex justify-start px-[4.5%] mb-[3%]">
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain" />
+              </div>
+
+              <!-- Technical Specifications Header -->
+              <div class="w-full px-[5%] mb-[3%] flex justify-start">
+                <img src="./assets/images/flow-meter-table/flow-meter-technical-specification-text.svg" class="w-[65%] object-contain object-left" />
+              </div>
+
+              <!-- Table Image -->
+              <div class="w-full px-[5%] flex flex-col justify-center items-start mb-[1.5%]">
+                <img src="./assets/images/flow-meter-table/flow-meter-table-img.svg" class="w-[90%] h-auto object-contain object-left" />
+              </div>
+
+              <!-- Product Selection Section -->
+              <div class="w-[92%] px-[5%] mb-[1.5%] mt-[1%] flex items-end justify-between">
+                <div class="w-[60%] flex justify-start">
+                  <img src="./assets/images/flow-meter-table/product-section-text.svg" class="w-full object-contain object-left" />
+                </div>
+                <div class="w-[25%] flex justify-end">
+                  <!-- The button image -->
+                  <a href="javascript:void(0)" onmousedown="event.stopPropagation();" ontouchstart="event.stopPropagation();" onclick="openFlowMeterPopup(event)" class="w-[90%] hover:scale-105 transition-transform block pointer-events-auto relative z-[999] cursor-pointer tb-link">
+                    <img src="./assets/images/flow-meter-table/type-data-btn.svg" class="w-full object-contain object-right" />
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Texts (Absolute positioned like other pages) -->
+            <div class="absolute bottom-[3%] left-[7.5%] right-[7.5%] flex justify-between items-end text-black text-[0.9vw] z-[50] w-[82%]">
+              <a href="https://www.fist-o.com" target="_blank" class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
+              <span>Page 11</span>
+            </div>
+
+            <!-- Page Shadow (Right Page -> Shadow on Left) -->
+            <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow" class="absolute top-0 left-[-1%] h-[100%] z-[30] pointer-events-none" />
+          </div>
+          <!-- *************************Flow Meter Table (Page 11) End**************************** -->
 
           <!-- *************************Page 12 Start**************************** -->
           <div class="page relative bg-white">
@@ -1276,7 +1586,7 @@
 
               <!-- Bottom Texts -->
               <div
-                class="px-[10%] w-full flex justify-between items-end font-['Inter'] font-bold text-black text-[1vw] z-[20] mt-auto flex-none">
+                class="px-[10%] w-full flex justify-between items-end font-['Inter'] text-black text-[0.9vw] z-[20] mt-auto flex-none">
                 <a href="https://www.fist-o.com" target="_blank"
                   class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
                 <span>Page 12</span>
@@ -1319,7 +1629,7 @@
 
               <!-- Bottom Texts -->
               <div
-                class="px-[10%] w-full flex justify-between items-end font-['Inter'] font-bold text-black text-[1vw] z-[20] mt-auto flex-none">
+                class="px-[10%] w-full flex justify-between items-end font-['Inter'] text-black text-[0.9vw] z-[20] mt-auto flex-none">
                 <a href="https://www.fist-o.com" target="_blank"
                   class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
                 <span>Page 13</span>
@@ -1386,16 +1696,16 @@
               <!-- Shelf 1 -->
               <div class="absolute top-[29%] left-[9%] w-[80%] z-20 scale-[0.85]">
                 <div class="absolute bottom-[39%] left-[5%] w-[90%] flex justify-between items-end z-30">
-                  <a href="#" target="_blank"
+                  <a href="https://terratechpacks.com/DigitalCatalogue/" target="_blank"
                     class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <img src="./assets/images/libarary/book-shelf-1-ttp.webp" class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="https://www.4mpacks.com/DigitalCatalogue/" target="_blank"
                     class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <img src="./assets/images/libarary/book-shelf-1-4m-packs.webp"
                       class="w-full h-auto drop-shadow-xl" />
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="https://www.rkpoly.com/DigitalCatalogue/" target="_blank"
                     class="w-[21%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <img src="./assets/images/libarary/book-shelf-1-rk-poly.webp"
                       class="w-full h-auto drop-shadow-xl" />
@@ -1460,7 +1770,7 @@
                 class="absolute bottom-[3%] left-[10%] right-[10%] flex justify-between items-end  text-black text-[0.9vw] z-[20]">
                 <a href="https://www.fist-o.com" target="_blank"
                   class="hover:text-[#026DF9] transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
-                <span>Page 10</span>
+                <span>Page 14</span>
               </div>
             </div>
 
@@ -1531,7 +1841,7 @@
           <!-- *************************Thank You Page End**************************** -->
 
           <!-- *************************Contact Page Start**************************** -->
-          <div class="page relative bg-[#111111]">
+          <div class="page hard relative bg-[#111111]">
             <!-- Background Image -->
             <img src="./assets/images/contact-page/contact-bg.webp"
               class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
@@ -2309,18 +2619,356 @@
       // Initial show on load
       showHint();
 
-      // Repeat every 3 minutes (180000 ms)
-      setInterval(showHint, 180000);
+      // Repeat every 5 minutes (180000 ms)
+      setInterval(showHint, 300000);
     })();
   </script>
-</body>
 
+  <style>
+    @keyframes modalReveal {
+      from { opacity: 0; transform: scale(0.95) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes overlayReveal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-overlay-reveal {
+      animation: overlayReveal 0.3s ease-out forwards;
+    }
+    .animate-modal-reveal {
+      animation: modalReveal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
 
-</html>
-// Repeat every 3 minutes (180000 ms)
-setInterval(showHint, 180000);
-})();
-</script>
+  <!-- Flow Meter Type Data Popup -->
+  <div id="flowMeterPopup" class="fixed inset-0 z-[99999999999] bg-black/60 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity w-full h-full">
+    <div id="flowMeterPopupInner" class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto flex flex-col p-4 sm:p-6 relative">
+      
+      <!-- Top Content -->
+      <div class="flex flex-col md:flex-row gap-4">
+        
+        <!-- Left: Form -->
+        <div class="w-full md:w-1/2 flex flex-col p-4 sm:p-6 border-[1.5px] border-gray-200 rounded-xl">
+          <h2 class="text-xl sm:text-2xl font-bold mb-4 font-['Inter']">ENTER DETAILS</h2>
+          
+          <div class="space-y-4 flex-grow">
+            <!-- Pipe Size -->
+            <div class="relative" id="pipe-size-container">
+              <label class="block text-sm sm:text-base font-bold mb-2 font-['Inter']">Pipe Size (DN)</label>
+              <div class="relative w-full">
+                <input type="text" id="fm-pipe-size" autocomplete="off" class="w-full border-[1.5px] border-gray-300 rounded-lg p-2.5 sm:p-3.5 text-sm sm:text-base focus:outline-none focus:border-[#026DF9] focus:ring-1 focus:ring-[#026DF9] transition-all cursor-pointer pr-8" placeholder="Select or type..." onclick="toggleDropdown('pipe')">
+                <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+              </div>
+              <div id="pipe-size-dropdown" class="absolute z-[999] w-full bg-white border border-gray-200 rounded-lg mt-1 max-h-40 overflow-y-auto hidden shadow-xl font-['Inter'] text-sm sm:text-base"></div>
+            </div>
+            
+            <!-- Flow Range -->
+            <div class="relative" id="flow-range-container">
+              <label class="block text-sm sm:text-base font-bold mb-2 font-['Inter']">Flow Range (m³/h)</label>
+              <div class="relative w-full">
+                <input type="text" id="fm-flow-range" autocomplete="off" class="w-full border-[1.5px] border-gray-300 rounded-lg p-2.5 sm:p-3.5 text-sm sm:text-base focus:outline-none focus:border-[#026DF9] focus:ring-1 focus:ring-[#026DF9] transition-all cursor-pointer pr-8" placeholder="Select or type..." onclick="toggleDropdown('flow')">
+                <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+              </div>
+              <div id="flow-range-dropdown" class="absolute z-[999] w-full bg-white border border-gray-200 rounded-lg mt-1 max-h-40 overflow-y-auto hidden shadow-xl font-['Inter'] text-sm sm:text-base"></div>
+            </div>
+            
+            <!-- Power Supply -->
+            <div class="relative" id="power-supply-container">
+              <label class="block text-sm sm:text-base font-bold mb-2 font-['Inter']">Power Supply</label>
+              <div class="relative w-full">
+                <input type="text" id="fm-power-supply" autocomplete="off" class="w-full border-[1.5px] border-gray-300 rounded-lg p-2.5 sm:p-3.5 text-sm sm:text-base focus:outline-none focus:border-[#026DF9] focus:ring-1 focus:ring-[#026DF9] transition-all cursor-pointer pr-8" placeholder="Select or type..." onclick="toggleDropdown('power')">
+                <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+              </div>
+              <div id="power-supply-dropdown" class="absolute z-[999] w-full bg-white border border-gray-200 rounded-lg mt-1 max-h-40 overflow-y-auto hidden shadow-xl font-['Inter'] text-sm sm:text-base"></div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex gap-3 mt-6">
+            <button onclick="searchFlowMeter()" class="flex-1 bg-[#026DF9] hover:bg-blue-700 text-white font-bold py-2.5 sm:py-3.5 rounded-lg transition-colors text-sm sm:text-base cursor-pointer">Search</button>
+            <button onclick="resetFlowMeter()" class="flex-1 bg-white border-[1.5px] border-gray-300 hover:bg-gray-50 text-black font-bold py-2.5 sm:py-3.5 rounded-lg transition-colors text-sm sm:text-base cursor-pointer">Reset</button>
+          </div>
+        </div>
+
+        <!-- Right: Image Result -->
+        <div class="w-full md:w-1/2 flex flex-col p-4 sm:p-6 border-[1.5px] border-gray-200 rounded-xl justify-center items-center relative min-h-[220px]">
+          <div id="fm-result-placeholder" class="text-gray-400 text-center flex flex-col items-center">
+            <svg class="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <p class="font-['Inter'] text-sm sm:text-base font-medium">Search to view product details</p>
+          </div>
+          
+          <div id="fm-result-content" class="hidden w-full h-full flex flex-col items-center justify-center">
+            <img src="./assets/images/flow-meter-table/flow-meter-product-image.webp" alt="Flow Meter" class="max-h-[220px] w-auto object-contain mb-4 drop-shadow-xl" />
+            <div id="fm-result-model" class="border-[1.5px] border-gray-300 rounded-lg py-2 px-8 text-center font-['Inter'] font-semibold text-base min-w-[50%]"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom: Table Result -->
+      <div id="fm-result-table-container" class="hidden w-full mt-4 overflow-x-auto border-[1.5px] border-gray-200 rounded-xl p-3 sm:p-4">
+        <table class="w-full text-center text-xs sm:text-sm font-['Inter'] whitespace-nowrap">
+          <thead>
+            <tr class="font-bold border-b border-gray-200">
+              <th class="py-2.5 px-3">Model No</th>
+              <th class="py-2.5 px-3">Pipe Size (DN)</th>
+              <th class="py-2.5 px-3">Flow Range (m³/h)</th>
+              <th class="py-2.5 px-3">Accuracy</th>
+              <th class="py-2.5 px-3">Pressure Rating</th>
+              <th class="py-2.5 px-3">Power Supply</th>
+              <th class="py-2.5 px-3">Out Signal</th>
+              <th class="py-2.5 px-3">Protection Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-gray-800 font-medium" id="fm-result-table-row">
+              <!-- Populated via JS -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Error Message -->
+      <div id="fm-error-msg" class="hidden w-full mt-3 text-red-500 text-center font-['Inter'] text-sm sm:text-base font-semibold">No matching model found. Please try different parameters.</div>
+
+      <!-- Close Button -->
+      <div class="w-full flex justify-end mt-4">
+        <button onclick="closeFlowMeterPopup()" class="border-[1.5px] border-gray-300 hover:bg-gray-50 text-black font-bold py-2 sm:py-2.5 px-5 sm:px-8 rounded-lg transition-colors flex items-center gap-2 font-['Inter'] text-sm sm:text-base cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const flowMeterData = [
+      { sNo: 1, modelNo: "FM-050", pipeSize: "DN50", flowRange: "1 - 80", accuracy: "±0.5% of rate", pressure: "PN16", power: "24V DC", output: "Pulse + 4-20mA", protection: "IP65" },
+      { sNo: 2, modelNo: "FM-080", pipeSize: "DN80", flowRange: "3 - 180", accuracy: "±0.5% of rate", pressure: "PN16", power: "24V DC", output: "Pulse + RS485 (Modbus RTU)", protection: "IP67" },
+      { sNo: 3, modelNo: "FM-100", pipeSize: "DN100", flowRange: "8 - 320", accuracy: "±0.3% of rate", pressure: "PN16", power: "230V AC 50/60Hz", output: "4-20mA + HART", protection: "IP67" },
+      { sNo: 4, modelNo: "FM-150", pipeSize: "DN150", flowRange: "20 - 700", accuracy: "±0.3% of rate", pressure: "PN25", power: "230V AC 50/60Hz", output: "4-20mA + RS485 (Modbus RTU)", protection: "IP68" },
+      { sNo: 5, modelNo: "FM-200", pipeSize: "DN200", flowRange: "40 - 1200", accuracy: "±0.2% of rate", pressure: "PN25", power: "24V DC", output: "Modbus RTU", protection: "IP68" },
+      { sNo: 6, modelNo: "FM-250", pipeSize: "DN250", flowRange: "70 - 1900", accuracy: "±0.2% of rate", pressure: "PN25", power: "230V AC 50/60Hz", output: "Pulse + Modbus RTU", protection: "IP68" },
+      { sNo: 7, modelNo: "FM-300", pipeSize: "DN300", flowRange: "100 - 2800", accuracy: "±0.2% of rate", pressure: "PN40", power: "230V AC 50/60Hz", output: "RS485 + Modbus RTU", protection: "IP68" },
+      { sNo: 8, modelNo: "FM-350", pipeSize: "DN350", flowRange: "150 - 3800", accuracy: "±0.2% of rate", pressure: "PN40", power: "24V DC", output: "4-20mA + HART", protection: "IP65" },
+      { sNo: 9, modelNo: "FM-400", pipeSize: "DN400", flowRange: "200 - 5000", accuracy: "±0.2% of rate", pressure: "PN40", power: "230V AC", output: "Pulse + RS485", protection: "IP67" },
+      { sNo: 10, modelNo: "FM-450", pipeSize: "DN450", flowRange: "280 - 6200", accuracy: "±0.2% of rate", pressure: "PN40", power: "24V AC", output: "Modbus RTU", protection: "IP67" },
+      { sNo: 11, modelNo: "FM-500", pipeSize: "DN1500", flowRange: "350 - 7800", accuracy: "±0.15% of rate", pressure: "PN40", power: "230V AC", output: "HART + RS485", protection: "IP68" },
+      { sNo: 12, modelNo: "FM-600", pipeSize: "DN600", flowRange: "500 - 11200", accuracy: "±0.15% of rate", pressure: "PN40", power: "230V AC", output: "4-20mA + Modbus", protection: "IP68" },
+      { sNo: 13, modelNo: "FM-700", pipeSize: "DN700", flowRange: "700 - 15000", accuracy: "±0.15% of rate", pressure: "PN40", power: "24V DC", output: "Pulse + HART", protection: "IP68" },
+      { sNo: 14, modelNo: "FM-800", pipeSize: "DN800", flowRange: "900 - 19000", accuracy: "±0.15% of rate", pressure: "PN40", power: "230V AC", output: "RS485 + Modbus", protection: "IP68" },
+      { sNo: 15, modelNo: "FM-1000", pipeSize: "DN1000", flowRange: "1400 - 30000", accuracy: "±0.1% of rate", pressure: "PN40", power: "230V AC", output: "HART + Modbus RTU", protection: "IP68" }
+    ];
+
+    let activeDropdown = null;
+    let dropdownState = {
+      pipe: { activeIndex: -1, options: [] },
+      flow: { activeIndex: -1, options: [] },
+      power: { activeIndex: -1, options: [] }
+    };
+
+    function getFilteredData() {
+      const normalizeStr = (str) => str.replace(/–/g, '-').replace(/\s+/g, '').toLowerCase();
+      const p = normalizeStr(document.getElementById('fm-pipe-size').value);
+      const f = normalizeStr(document.getElementById('fm-flow-range').value);
+      const pw = normalizeStr(document.getElementById('fm-power-supply').value);
+
+      const knownPipes = new Set(flowMeterData.map(i => normalizeStr(i.pipeSize)));
+      const knownFlows = new Set(flowMeterData.map(i => normalizeStr(i.flowRange)));
+      const knownPowers = new Set(flowMeterData.map(i => normalizeStr(i.power)));
+
+      let matches = flowMeterData;
+      if (p && knownPipes.has(p)) matches = matches.filter(i => normalizeStr(i.pipeSize) === p);
+      if (f && knownFlows.has(f)) matches = matches.filter(i => normalizeStr(i.flowRange) === f);
+      if (pw && knownPowers.has(pw)) matches = matches.filter(i => normalizeStr(i.power) === pw);
+
+      return {
+        pipes: [...new Set(matches.map(i => i.pipeSize))],
+        flows: [...new Set(matches.map(i => i.flowRange))],
+        powers: [...new Set(matches.map(i => i.power))]
+      };
+    }
+
+    function renderDropdown(type) {
+      const input = document.getElementById(`fm-${type === 'pipe' ? 'pipe-size' : type === 'flow' ? 'flow-range' : 'power-supply'}`);
+      const dropdown = document.getElementById(`${type === 'pipe' ? 'pipe-size' : type === 'flow' ? 'flow-range' : 'power-supply'}-dropdown`);
+      const available = getFilteredData();
+      let options = available[type + 's'];
+      const query = input.value.toLowerCase();
+      
+      if (query) {
+        options = options.filter(opt => opt.toLowerCase().includes(query));
+      }
+      
+      dropdownState[type].options = options;
+      dropdown.innerHTML = '';
+      
+      if (options.length === 0) {
+        dropdown.innerHTML = '<div class="p-3 text-gray-500 text-center">No options</div>';
+        dropdown.classList.remove('hidden');
+        return;
+      }
+
+      options.forEach((opt, index) => {
+        const div = document.createElement('div');
+        div.className = `p-3 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-0 ${index === dropdownState[type].activeIndex ? 'bg-blue-100' : ''}`;
+        div.innerText = opt;
+        div.onmousedown = (e) => { // mousedown fires before blur
+          e.preventDefault();
+          input.value = opt;
+          closeAllDropdowns();
+        };
+        dropdown.appendChild(div);
+      });
+      dropdown.classList.remove('hidden');
+      activeDropdown = type;
+    }
+
+    function toggleDropdown(type) {
+      if (activeDropdown === type) {
+        closeAllDropdowns();
+      } else {
+        closeAllDropdowns();
+        dropdownState[type].activeIndex = -1;
+        renderDropdown(type);
+      }
+    }
+
+    function closeAllDropdowns() {
+      document.getElementById('pipe-size-dropdown').classList.add('hidden');
+      document.getElementById('flow-range-dropdown').classList.add('hidden');
+      document.getElementById('power-supply-dropdown').classList.add('hidden');
+      activeDropdown = null;
+    }
+
+    // Setup events
+    ['pipe', 'flow', 'power'].forEach(type => {
+      const inputId = `fm-${type === 'pipe' ? 'pipe-size' : type === 'flow' ? 'flow-range' : 'power-supply'}`;
+      const input = document.getElementById(inputId);
+      
+      input.addEventListener('focus', () => {
+        dropdownState[type].activeIndex = -1;
+        renderDropdown(type);
+      });
+      
+      input.addEventListener('blur', () => {
+        setTimeout(closeAllDropdowns, 150); // slight delay to allow click
+      });
+
+      input.addEventListener('input', () => {
+        dropdownState[type].activeIndex = -1;
+        renderDropdown(type);
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if (!activeDropdown) return;
+        const state = dropdownState[type];
+        const dropdown = document.getElementById(`${type === 'pipe' ? 'pipe-size' : type === 'flow' ? 'flow-range' : 'power-supply'}-dropdown`);
+        
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          state.activeIndex = (state.activeIndex + 1) % state.options.length;
+          renderDropdown(type);
+          dropdown.children[state.activeIndex]?.scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          state.activeIndex = (state.activeIndex - 1 + state.options.length) % state.options.length;
+          renderDropdown(type);
+          dropdown.children[state.activeIndex]?.scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (state.activeIndex >= 0 && state.options[state.activeIndex]) {
+            input.value = state.options[state.activeIndex];
+            closeAllDropdowns();
+          }
+        } else if (e.key === 'Escape') {
+          closeAllDropdowns();
+        }
+      });
+    });
+
+    function openFlowMeterPopup(e) {
+      if (e) e.preventDefault();
+      const popup = document.getElementById('flowMeterPopup');
+      const inner = document.getElementById('flowMeterPopupInner');
+      
+      popup.classList.remove('hidden');
+      popup.classList.add('animate-overlay-reveal');
+      inner.classList.add('animate-modal-reveal');
+    }
+
+    function closeFlowMeterPopup() {
+      const popup = document.getElementById('flowMeterPopup');
+      const inner = document.getElementById('flowMeterPopupInner');
+      
+      popup.classList.add('hidden');
+      popup.classList.remove('animate-overlay-reveal');
+      inner.classList.remove('animate-modal-reveal');
+      
+      closeAllDropdowns();
+    }
+
+    function resetFlowMeter() {
+      document.getElementById('fm-pipe-size').value = '';
+      document.getElementById('fm-flow-range').value = '';
+      document.getElementById('fm-power-supply').value = '';
+      closeAllDropdowns();
+      
+      document.getElementById('fm-result-placeholder').classList.remove('hidden');
+      document.getElementById('fm-result-content').classList.add('hidden');
+      document.getElementById('fm-result-table-container').classList.add('hidden');
+      document.getElementById('fm-error-msg').classList.add('hidden');
+    }
+
+    function searchFlowMeter() {
+      closeAllDropdowns();
+      const normalizeStr = (str) => str.replace(/–/g, '-').replace(/\s+/g, '').toLowerCase();
+      
+      const pipe = normalizeStr(document.getElementById('fm-pipe-size').value);
+      const flow = normalizeStr(document.getElementById('fm-flow-range').value);
+      const power = normalizeStr(document.getElementById('fm-power-supply').value);
+      
+      let matches = flowMeterData;
+      if (pipe) matches = matches.filter(item => normalizeStr(item.pipeSize) === pipe);
+      if (flow) matches = matches.filter(item => normalizeStr(item.flowRange) === flow);
+      if (power) matches = matches.filter(item => normalizeStr(item.power) === power);
+      
+      if (matches.length > 0) {
+        const result = matches[0];
+        
+        document.getElementById('fm-result-placeholder').classList.add('hidden');
+        document.getElementById('fm-result-content').classList.remove('hidden');
+        document.getElementById('fm-result-model').innerText = result.modelNo;
+        
+        document.getElementById('fm-result-table-row').innerHTML = `
+          <td class="py-3 px-2">${result.modelNo}</td>
+          <td class="py-3 px-2">${result.pipeSize}</td>
+          <td class="py-3 px-2">${result.flowRange}</td>
+          <td class="py-3 px-2">${result.accuracy}</td>
+          <td class="py-3 px-2">${result.pressure}</td>
+          <td class="py-3 px-2">${result.power}</td>
+          <td class="py-3 px-2">${result.output}</td>
+          <td class="py-3 px-2">${result.protection}</td>
+        `;
+        
+        document.getElementById('fm-result-table-container').classList.remove('hidden');
+        document.getElementById('fm-error-msg').classList.add('hidden');
+      } else {
+        document.getElementById('fm-result-placeholder').classList.remove('hidden');
+        document.getElementById('fm-result-content').classList.add('hidden');
+        document.getElementById('fm-result-table-container').classList.add('hidden');
+        document.getElementById('fm-error-msg').classList.remove('hidden');
+      }
+    }
+  </script>
 </body>
 
 
