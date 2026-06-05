@@ -3482,3 +3482,10 @@ a {
     max-height: 70vh;
   }
 }
+
+
+@media screen and (max-width: 480px) {
+  .catalog-embed__container {
+    scale: 1.15;
+  }
+}
