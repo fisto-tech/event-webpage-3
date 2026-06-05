@@ -2039,7 +2039,7 @@ a[href*="google.com/maps"] {
 
 @media screen and (max-width: 1024px) {
     .shadow-mobile {
-        left: -1% !important;
+        left: -4% !important;
         transform: rotate(180deg);
     }
 }

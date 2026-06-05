@@ -19,7 +19,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 
-  <!-- Turn.js UI Kit -->
+
+
+  <!-- flipbook script start -->
   <script type="text/javascript" src="assets/js/turn.min.js"></script>
 
   <!-- App dependencies -->
@@ -254,11 +256,9 @@
         id="navToggle1" class=" absolute top-[50%] left-[2%] w-[2vw] h-[2vw] cursor-pointer z-[910]"
         style="transform: translateY(-50%);" />
       <img src="../global-assets/navbar-icons/share-icon.svg" title="share" alt="share-icon" id="shareBtn"
-        class="absolute top-[50%] left-[30%] cursor-pointer w-[2vw] h-[2vw]  z-[910]"
+        class="absolute top-[50%] left-[34%] cursor-pointer w-[2vw] h-[2vw]  z-[910]"
         style="transform: translateY(-50%);" />
-      <img src="../global-assets/navbar-icons/download-icon.svg" title="download" alt="download-icon" id="download-btn"
-        class="absolute top-[50%] left-[33.5%] cursor-pointer w-[2vw] h-[2vw]  z-[910]"
-        style="transform: translateY(-50%);" />
+
       <img src="../global-assets/navbar-icons/full-screen-icon.svg" title="full screen" alt="full-screen-icon"
         id="full-screen-btn" class="absolute top-[50%] right-[2%] cursor-pointer w-[2vw] h-[2vw] full-screen  z-[910]"
         style="transform: translateY(-50%);" />
@@ -369,16 +369,15 @@
         <div class="mob-toc-title">Table of contents</div>
         <ul class="mob-toc-list">
           <li class="mob-tb-link tb-link" data-page="1" data-audio-path="../audios/home.mp3"><a>Home</a></li>
-          <li class="mob-tb-link tb-link" data-page="2" data-audio-path="../audios/about us.mp3"><a>About Us</a></li>
-          <li class="mob-tb-link tb-link" data-page="3" data-audio-path="../audios/products.mp3"><a>Products</a></li>
           <li class="mob-tb-link tb-link" data-page="4" data-audio-path="../audios/taper-push-pulley.mp3"><a>Feature 1</a></li>
-          <li class="mob-tb-link tb-link" data-page="10" data-audio-path="../audios/timing-pulley.mp3"><a>Feature 2</a></li>
-          <li class="mob-tb-link tb-link" data-page="13" data-audio-path="../audios/poly-v-pulley.mp3"><a>Industry Service</a></li>
-          <li class="mob-tb-link tb-link" data-page="17" data-audio-path="../audios/sprocket.mp3"><a>Our Project Video</a></li>
-          <li class="mob-tb-link tb-link" data-page="24" data-audio-path="../audios/couplings.mp3"><a>Library</a></li>
-          <li class="mob-tb-link tb-link" data-page="56" data-audio-path="../audios/diverter-wheels.mp3"><a>Thank You</a></li>
-          <li class="mob-tb-link tb-link" data-page="60" data-audio-path="../audios/contact_us.mp3"><a>Contact Us</a></li>
-
+          <li class="mob-tb-link tb-link" data-page="5" data-audio-path="../audios/timing-pulley.mp3"><a>Feature 2</a></li>
+          <li class="mob-tb-link tb-link" data-page="6" data-audio-path="../audios/about us.mp3"><a>About Us</a></li>
+          <li class="mob-tb-link tb-link" data-page="7" data-audio-path="../audios/poly-v-pulley.mp3"><a>Industry Service</a></li>
+          <li class="mob-tb-link tb-link" data-page="8" data-audio-path="../audios/products.mp3"><a>Products</a></li>
+          <li class="mob-tb-link tb-link" data-page="12" data-audio-path="../audios/sprocket.mp3"><a>Our Project Video</a></li>
+          <li class="mob-tb-link tb-link" data-page="14" data-audio-path="../audios/couplings.mp3"><a>Library</a></li>
+          <li class="mob-tb-link tb-link" data-page="15" data-audio-path="../audios/diverter-wheels.mp3"><a>Thank You</a></li>
+          <li class="mob-tb-link tb-link" data-page="16" data-audio-path="../audios/contact_us.mp3"><a>Contact Us</a></li>
         </ul>
       </nav>
 
@@ -398,12 +397,7 @@
           </span>
           <span class="mob-action-label">Share</span>
         </button>
-        <button id="mobDownloadBtn" class="mob-action-row">
-          <span class="mob-action-icon">
-            <img src="../global-assets/navbar-icons/download-icon.svg" class="mob-action-svg" />
-          </span>
-          <span class="mob-action-label">Download</span>
-        </button>
+
       </div>
 
 
@@ -421,25 +415,15 @@
         <div class="toc-title"></div>
         <ul class="toc-list">
           <li class="tb-link cursor-pointer" data-page="1" data-audio-path="../audios/home.mp3"><a> </a></li>
-          <li class="tb-link cursor-pointer" data-page="2" data-audio-path="../audios/about us.mp3"><a></a>
-          </li>
-          <li class="tb-link cursor-pointer" data-page="3" data-audio-path="../audios/products.mp3"><a> </a>
-          </li>
-          <li class="tb-link cursor-pointer" data-page="4" data-audio-path="../audios/taper-push-pulley.mp3"><a>
-            </a></li>
-          <li class="tb-link cursor-pointer" data-page="10" data-audio-path="../audios/timing-pulley.mp3"><a>
-            </a></li>
-          <li class="tb-link cursor-pointer" data-page="13" data-audio-path="../audios/poly-v-pulley.mp3"><a>
-            </a></li>
-          <li class="tb-link cursor-pointer" data-page="17" data-audio-path="../audios/sprocket.mp3"><a></a>
-          </li>
-          <li class="tb-link cursor-pointer" data-page="24" data-audio-path="../audios/couplings.mp3"><a></a>
-          </li>
-          <li class="tb-link cursor-pointer" data-page="56" data-audio-path="../audios/diverter-wheels.mp3"><a>
-            </a></li>
-          <li class="tb-link cursor-pointer" data-page="60" data-audio-path="../audios/contact_us.mp3"><a></a></li>
-
-
+          <li class="tb-link cursor-pointer" data-page="4" data-audio-path="../audios/taper-push-pulley.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="5" data-audio-path="../audios/timing-pulley.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="6" data-audio-path="../audios/about us.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="7" data-audio-path="../audios/poly-v-pulley.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="8" data-audio-path="../audios/products.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="12" data-audio-path="../audios/sprocket.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="14" data-audio-path="../audios/couplings.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="15" data-audio-path="../audios/diverter-wheels.mp3"><a></a></li>
+          <li class="tb-link cursor-pointer" data-page="16" data-audio-path="../audios/contact_us.mp3"><a></a></li>
         </ul>
       </nav>
 
@@ -581,17 +565,7 @@
       <!-- *************************share button navbar end**************************  -->
 
 
-      <!-- ***********************************download start*********************************** -->
 
-
-      <div id="downloadPopup"
-        class="hidden mobile-download fixed top-[2%] right-[.8%] bg-gray-500 text-white px-4 py-3 rounded-lg shadow-lg z-[9999] w-[20vw] text-sm opacity-0 transition-opacity duration-300">
-        Download started...
-      </div>
-
-
-
-      <!-- ***********************************download end*********************************** -->
 
 
 
@@ -704,7 +678,7 @@
 
             <!-- Page Shadow (Right Page -> Shadow on Left) -->
             <img src="../global-assets/pages/right-page-shadow.svg" alt="shadow"
-              class="absolute top-[0%] left-[-1%] h-[100%] shadow-mobile z-[30] pointer-events-none" />
+              class="absolute top-[0%] left-[0%] h-[100%] shadow-mobile z-[30] pointer-events-none" />
           </div>
 
           <!-- *************************page 1 End**************************** -->
@@ -771,28 +745,28 @@
                   data-page="4" />
                 <img src="./assets/images/table-of-contents/content-feature-2.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="10" />
+                  data-page="5" />
                 <img src="./assets/images/table-of-contents/content-about-us.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="2" />
+                  data-page="6" />
                 <img src="./assets/images/table-of-contents/content-industry-service.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="13" />
+                  data-page="7" />
                 <img src="./assets/images/table-of-contents/content-products.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="3" />
+                  data-page="8" />
                 <img src="./assets/images/table-of-contents/content-our-project-video.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="17" />
+                  data-page="12" />
                 <img src="./assets/images/table-of-contents/content-library.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="24" />
+                  data-page="14" />
                 <img src="./assets/images/table-of-contents/content-thankyou.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="56" />
+                  data-page="15" />
                 <img src="./assets/images/table-of-contents/content-contact-us.svg"
                   class="w-full h-auto object-contain cursor-pointer tb-link transition-transform duration-300 hover:scale-[1.02] origin-left up-img"
-                  data-page="60" />
+                  data-page="16" />
               </div>
 
               <!-- Bottom Texts -->
@@ -892,14 +866,12 @@
 
           <div class="page relative bg-white">
             <!-- Logo -->
-            <div class="absolute top-[4%] left-[6%] z-[2]">
-              <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[100%] object-contain"
-                style="width: clamp(60px, 15%, 120px);" />
-            </div>
+            <img src="../../assets/images/fisto-logo.png" alt="logo"
+              class="absolute w-[18%] top-[3.5%] left-[6.5%] z-[2]" />
 
             <!-- Top Left Content -->
             <img src="./assets/images/about-us/about-top-left-content.svg" alt="About Us"
-              class="absolute top-[10%] left-[10%] w-[29%] object-contain" />
+              class="absolute top-[10.5%] left-[7%] w-[29%] object-contain" />
 
             <!-- Top Right Content -->
             <img src="./assets/images/about-us/about-top-right.svg" alt="Vision and Mission"
@@ -941,10 +913,8 @@
               class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" />
 
             <!-- Logo -->
-            <div class="absolute top-[4%] left-[6%] z-[25]">
-              <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="object-contain"
-                style="width: clamp(60px, 15%, 120px);" />
-            </div>
+           <img src="../../assets/images/fisto-logo.png" alt="logo"
+              class="absolute w-[18%] top-[3.5%] left-[6.5%] z-[2]" />
 
             <!-- Top Right Laptop Image -->
             <img src="./assets/images/industries-we-serve/industries-top-right-img.webp" alt="Laptop Preview"
@@ -1159,6 +1129,49 @@
                     });
                   },
                   show: function() {
+                    currentIndex = 0;
+                    const cap = capacities[0];
+                    const basePath = './assets/images/round-containers/' + cap;
+                    
+                    const elBg = document.getElementById('rc-bg');
+                    const elTitle = document.getElementById('rc-title');
+                    const elDesc = document.getElementById('rc-desc');
+                    const el360 = document.getElementById('rc-360');
+                    const elFeatL = document.getElementById('rc-feat-l');
+                    const elFeatR = document.getElementById('rc-feat-r');
+                    const elImg = document.getElementById('rc-img');
+
+                    if (elBg) elBg.src = basePath + '/' + cap + '-bg.webp';
+                    if (elTitle) elTitle.src = basePath + '/product-title.svg';
+                    if (elDesc) elDesc.src = basePath + '/product-description.svg';
+                    if (el360) el360.src = basePath + '/360-icon.svg';
+                    if (elFeatL) elFeatL.src = basePath + '/features-left.svg';
+                    if (elFeatR) elFeatR.src = basePath + '/features-right.svg';
+                    if (elImg) elImg.src = basePath + '/product-image.svg';
+
+                    cards.forEach((card, i) => {
+                      if (!card) return;
+                      card.className = 'rc-card-wrapper';
+                      if (i === 0) {
+                        card.classList.add('rc-card-center');
+                      } else if (i === 2) {
+                        card.classList.add('rc-card-left');
+                      } else {
+                        card.classList.add('rc-card-right');
+                      }
+                    });
+
+                    dots.forEach((dot, i) => {
+                      if (!dot) return;
+                      if (i === 0) {
+                        dot.classList.add('active');
+                      } else {
+                        dot.classList.remove('active');
+                      }
+                    });
+
+                    resetTimer();
+
                     animConfig.forEach(item => {
                       if (item.el) {
                         item.el.style.transition = `all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) ${item.delay}`;
@@ -1430,6 +1443,36 @@
                     });
                   },
                   show: function() {
+                    currentIndex = 0;
+                    const cap = capacities[0];
+                    const basePath = './assets/images/water-bottle/' + cap;
+
+                    const elBg = document.getElementById('wb-bg');
+                    const elImg = document.getElementById('wb-img');
+                    const elLeft = document.getElementById('wb-left');
+                    const elRight = document.getElementById('wb-right');
+                    const elCenter = document.getElementById('wb-center');
+
+                    if (elBg) elBg.src = basePath + '/' + cap + '-background-img.webp';
+                    if (elImg) elImg.src = basePath + '/' + cap + '-bottle-img.webp';
+                    if (elLeft) elLeft.src = basePath + '/' + cap + '-left-content.svg';
+                    if (elRight) elRight.src = basePath + '/' + cap + '-right-icons.svg';
+                    if (elCenter) elCenter.src = basePath + '/' + cap + '-center-measurements.svg';
+
+                    cards.forEach((card, i) => {
+                      if (!card) return;
+                      card.className = 'wb-card-wrapper';
+                      if (i === 0) {
+                        card.classList.add('wb-card-center');
+                      } else if (i === 2) {
+                        card.classList.add('wb-card-left');
+                      } else {
+                        card.classList.add('wb-card-right');
+                      }
+                    });
+
+                    resetTimer();
+
                     animConfig.forEach(item => {
                       if (item.el) {
                         item.el.style.transition = `all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) ${item.delay}`;
@@ -1652,16 +1695,21 @@
           <!-- *************************Flow Meter Table (Page 11) End**************************** -->
 
           <!-- *************************Page 12 Start**************************** -->
-          <div class="page relative bg-white overflow-hidden">
+          <div class="page relative bg-black overflow-hidden" id="project-vid-page-1">
+            <!-- First half video (takes full height on desktop, left half on mobile) -->
             <video id="project-vid-1" src="./assets/images/our-project-videos/idc-video-first-half.mp4"
-              class="absolute inset-0 w-full h-full object-cover z-0" playsinline></video>
+              class="absolute top-0 left-0 w-[50%] lg:w-full h-full object-cover object-right lg:object-center z-0" playsinline></video>
+              
+            <!-- Second half video for mobile (takes right half on mobile, hidden on desktop) -->
+            <video id="project-vid-1-mobile" src="./assets/images/our-project-videos/idc-video-second-half.mp4"
+              class="absolute top-0 left-[50%] w-[50%] h-full object-cover object-left z-0 lg:hidden" playsinline></video>
 
-            <div class="w-full h-full flex flex-col relative z-10 pt-[5%] pb-[4%] mix-blend-difference text-white">
+            <div class="w-full h-full flex flex-col relative z-10 pt-[5%] pb-[4%] mix-blend-difference text-white pointer-events-none">
 
               <div class="px-[10%] w-full flex-none">
                 <!-- Top Logo -->
                 <div class="w-full flex justify-start mb-[3%]">
-                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain brightness-0 invert" />
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain brightness-0 invert pointer-events-auto" />
                 </div>
                 <!-- Header Text -->
                 <div class="w-full flex justify-start font-bold text-[2.2vw] tracking-normal font-['Inter'] text-white">
@@ -1669,10 +1717,9 @@
                 </div>
               </div>
 
-              <!-- Video Container (Natural Height, Centered vertically) -->
-              <div class="w-full flex-grow flex items-center justify-end mt-[4%] mb-[6%] pl-[10%] pr-0 relative">
-                <div class="relative w-[66.5%] h-full">
-                  <!-- Left Page Controls (Play Button at Right Edge) -->
+              <!-- Desktop controls -->
+              <div class="w-full flex-grow flex items-center justify-end mt-[4%] mb-[6%] pl-[10%] pr-0 relative hidden lg:flex pointer-events-none">
+                <div class="relative w-[66.5%] h-full pointer-events-auto">
                   <button onclick="playVideos()"
                     class="absolute bottom-[3%] right-4 z-50 rounded-full w-12 h-12 border-[2px] border-white bg-transparent hover:bg-white/20 transition-all flex items-center justify-center cursor-pointer shadow-lg hover:scale-110">
                     <svg class="w-6 h-6 text-white fill-current ml-1" viewBox="0 0 24 24">
@@ -1682,9 +1729,19 @@
                 </div>
               </div>
 
+              <!-- Mobile controls -->
+              <div class="absolute bottom-[10%] left-1/2 -translate-x-1/2 flex gap-4 z-50 lg:hidden pointer-events-auto">
+                 <button onclick="playVideos()" class="rounded-full w-12 h-12 border-[2px] border-white bg-transparent hover:bg-white/20 transition-all flex items-center justify-center cursor-pointer shadow-lg hover:scale-110">
+                   <svg class="w-6 h-6 text-white fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                 </button>
+                 <button onclick="pauseVideos()" class="rounded-full w-12 h-12 border-[2px] border-white bg-transparent hover:bg-white/20 transition-all flex items-center justify-center cursor-pointer shadow-lg hover:scale-110">
+                   <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                 </button>
+              </div>
+
               <!-- Bottom Texts -->
               <div
-                class="px-[10%] w-full flex justify-between items-end font-['Inter'] text-[2.5vw] md:text-[1.5vw] lg:text-[0.9vw] z-[20] mt-auto flex-none text-white">
+                class="px-[10%] w-full flex justify-between items-end font-['Inter'] text-[2.5vw] md:text-[1.5vw] lg:text-[0.9vw] z-[20] mt-auto flex-none text-white pointer-events-auto">
                 <a href="https://www.fist-o.com" target="_blank"
                   class="transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
                 <span>Page 12</span>
@@ -1698,16 +1755,16 @@
           <!-- *************************Page 12 End**************************** -->
 
           <!-- *************************Page 13 Start**************************** -->
-          <div class="page relative bg-white overflow-hidden">
+          <div class="page relative bg-white overflow-hidden" id="project-vid-page-2">
             <video id="project-vid-2" src="./assets/images/our-project-videos/idc-video-second-half.mp4"
               class="absolute inset-0 w-full h-full object-cover z-0" playsinline></video>
 
-            <div class="w-full h-full flex flex-col relative z-10 pt-[5%] pb-[4%] mix-blend-difference text-white">
+            <div class="w-full h-full flex flex-col relative z-10 pt-[5%] pb-[4%] mix-blend-difference text-white pointer-events-none">
 
               <div class="px-[10%] w-full flex-none">
                 <!-- Top Logo -->
                 <div class="w-full flex justify-start mb-[3%]">
-                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain brightness-0 invert" />
+                  <img src="../../assets/images/fisto-logo.png" alt="Fisto Logo" class="w-[15%] object-contain brightness-0 invert pointer-events-auto" />
                 </div>
                 <!-- Header Text -->
                 <div class="w-full flex justify-start font-bold text-[2.2vw] tracking-normal font-['Inter'] text-white">
@@ -1716,7 +1773,7 @@
               </div>
 
               <!-- Video Container (Natural Height, Centered vertically) -->
-              <div class="w-full flex-grow flex items-center justify-start mt-[4%] mb-[6%] pr-[10%] pl-0 relative">
+              <div class="w-full flex-grow flex items-center justify-start mt-[4%] mb-[6%] pr-[10%] pl-0 relative pointer-events-auto">
                 <div class="relative w-[66.5%] h-full">
                   <!-- Right Page Controls (Pause Button at Left Edge) -->
                   <button onclick="pauseVideos()"
@@ -1730,7 +1787,7 @@
 
               <!-- Bottom Texts -->
               <div
-                class="px-[10%] w-full flex justify-between items-end font-['Inter'] text-[2.5vw] md:text-[1.5vw] lg:text-[0.9vw] z-[20] mt-auto flex-none text-white">
+                class="px-[10%] w-full flex justify-between items-end font-['Inter'] text-[2.5vw] md:text-[1.5vw] lg:text-[0.9vw] z-[20] mt-auto flex-none text-white pointer-events-auto">
                 <a href="https://www.fist-o.com" target="_blank"
                   class="transition-colors cursor-pointer pointer-events-auto relative z-50">www.fist-o.com</a>
                 <span>Page 13</span>
@@ -1741,22 +1798,37 @@
               function playVideos() {
                 const vid1 = document.getElementById("project-vid-1");
                 const vid2 = document.getElementById("project-vid-2");
-                if (vid1 && vid2) {
-                  vid2.currentTime = vid1.currentTime;
-                  let p1 = vid1.play();
-                  let p2 = vid2.play();
-                  if (p1) p1.catch(e => console.log(e));
-                  if (p2) p2.catch(e => console.log(e));
+                const vid1m = document.getElementById("project-vid-1-mobile");
+                
+                if (window.innerWidth <= 1024) {
+                  // Mobile scenario
+                  if (vid1 && vid1m) {
+                    vid1m.currentTime = vid1.currentTime;
+                    let p1 = vid1.play();
+                    let p2 = vid1m.play();
+                    if (p1) p1.catch(e => console.log(e));
+                    if (p2) p2.catch(e => console.log(e));
+                  }
+                } else {
+                  // Desktop scenario
+                  if (vid1 && vid2) {
+                    vid2.currentTime = vid1.currentTime;
+                    let p1 = vid1.play();
+                    let p2 = vid2.play();
+                    if (p1) p1.catch(e => console.log(e));
+                    if (p2) p2.catch(e => console.log(e));
+                  }
                 }
               }
 
               function pauseVideos() {
                 const vid1 = document.getElementById("project-vid-1");
                 const vid2 = document.getElementById("project-vid-2");
-                if (vid1 && vid2) {
-                  vid1.pause();
-                  vid2.pause();
-                }
+                const vid1m = document.getElementById("project-vid-1-mobile");
+                
+                if (vid1) vid1.pause();
+                if (vid2) vid2.pause();
+                if (vid1m) vid1m.pause();
               }
 
               // Enforce continuous sync to prevent drift
@@ -1823,7 +1895,7 @@
               <!-- Shelf 2 -->
               <div class="absolute top-[48.5%] left-[9%] w-[80%] z-20 scale-[0.85]">
                 <div class="absolute bottom-[39%] left-[12.5%] w-[75%] flex justify-center gap-[5.5%] items-end z-30">
-                  <a href="#" target="_blank"
+                  <a href="http://airlockintl.co.in/DigitalCatalogue/DCSR/index.html" target="_blank"
                     class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <img src="./assets/images/libarary/book-shelf-2-airlock.webp"
                       class="w-full h-auto drop-shadow-xl" />
@@ -1846,7 +1918,7 @@
               <!-- Shelf 3 -->
               <div class="absolute top-[67%] left-[9%] w-[80%] z-20 scale-[0.85]">
                 <div class="absolute bottom-[39%] left-[12.5%] w-[75%] flex justify-center gap-[9%] items-end z-30">
-                  <a href="#" target="_blank"
+                  <a href="https://airlockintl.co.in/DigitalCatalogue/DTD/index.html" target="_blank"
                     class="w-[25%] transition-transform hover:scale-105 hover:-translate-y-2 pointer-events-auto">
                     <img src="./assets/images/libarary/book-shelf-3-airlock.webp"
                       class="w-full h-auto drop-shadow-xl" />
@@ -1910,7 +1982,7 @@
                   class="w-[55%] object-contain mb-[10%] pointer-events-none" />
 
                 <!-- Lets Discuss Card -->
-                <a href="#" target="_blank"
+                <a href="https://www.fist-o.com/contact-us.html" target="_blank"
                   class="w-[75%] hover:scale-105 transition-transform z-20 pointer-events-auto mb-[10%]">
                   <img src="./assets/images/thankyou/lets-discuss-card.svg"
                     class="w-full h-auto drop-shadow-xl border-[0.5px] border-[#6f6d6d] rounded-[10px]" />
@@ -1918,13 +1990,13 @@
 
                 <!-- Social Icons -->
                 <div class="flex justify-center gap-[4%] w-full z-20 pointer-events-auto mb-[3%]">
-                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                  <a href="https://www.linkedin.com/company/82545817" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/linked-in-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                  <a href="https://www.facebook.com/people/Fist-o-AR" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/facebook-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                  <a href="https://www.instagram.com/fisto_ar?igsh=ZWRlZ2ZjY3F0dmVi" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/instagram-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="#" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                  <a href="https://www.youtube.com/@fist-oar7424" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/youtube-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
                 </div>
 
@@ -2008,13 +2080,13 @@
                   <div class="flex flex-col items-center w-[65%]">
                     <img src="./assets/images/contact-page/followus-text.svg" class="w-[50%] object-contain mb-[7%]" />
                     <div class="flex items-center justify-center gap-[8%] w-[85.5%]">
-                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                      <a href="https://www.youtube.com/@fist-oar7424" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
                           src="./assets/images/contact-page/youtube-icon.svg" class="w-full object-contain" /></a>
-                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                      <a href="https://www.instagram.com/fisto_ar?igsh=ZWRlZ2ZjY3F0dmVi" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
                           src="./assets/images/contact-page/instagram-icon.svg" class="w-full object-contain" /></a>
-                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                      <a href="https://www.linkedin.com/company/82545817" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
                           src="./assets/images/contact-page/linkedin-icon.svg" class="w-full object-contain" /></a>
-                      <a href="#" class="w-[15%] hover:scale-110 transition-transform"><img
+                      <a href="https://www.facebook.com/people/Fist-o-AR" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
                           src="./assets/images/contact-page/facebook-icon.svg" class="w-full object-contain" /></a>
                     </div>
                   </div>
@@ -2597,25 +2669,7 @@
         closeAll();
       });
 
-      /* Download — reuses existing download logic */
-      document.getElementById('mobDownloadBtn').addEventListener('click', function () {
-        const downloadPopup = document.getElementById('downloadPopup');
-        if (downloadPopup) {
-          downloadPopup.classList.remove('hidden');
-          setTimeout(function () { downloadPopup.classList.add('opacity-100'); }, 10);
-          setTimeout(function () {
-            downloadPopup.classList.remove('opacity-100');
-            setTimeout(function () { downloadPopup.classList.add('hidden'); }, 300);
-          }, 2000);
-        }
-        const link = document.createElement('a');
-        link.href = '../global-assets/Airlock-IDC.pdf';
-        link.download = 'Airlock-IDC.pdf';
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        closeAll();
-      });
+
 
       /* Sync page number */
       $('#flipbook').bind('turned', function (event, page) {
@@ -3086,6 +3140,33 @@
       }
     }
   </script>
+  <!-- Mobile specific setup: Remove Page 13 and fix indexing -->
+  <script>
+    if (window.innerWidth <= 1024) {
+      const p13 = document.getElementById("project-vid-page-2");
+      if (p13) {
+        p13.parentNode.removeChild(p13);
+      }
+
+      // Update data-page attributes
+      document.querySelectorAll('[data-page]').forEach(el => {
+        let p = parseInt(el.getAttribute('data-page'));
+        if (p > 12) el.setAttribute('data-page', p - 1);
+      });
+
+      // Update visual Page numbers
+      document.querySelectorAll('#flipbook > .page').forEach((pageEl, idx) => {
+        const pageNum = idx + 1;
+        const spans = pageEl.querySelectorAll('span');
+        spans.forEach(span => {
+          if (span.textContent.trim().startsWith('Page ')) {
+            span.textContent = 'Page ' + pageNum;
+          }
+        });
+      });
+    }
+  </script>
+
   <!-- Thumbnail Generator Script -->
   <script>
     (function() {
@@ -3151,6 +3232,7 @@
         });
       }
     })();
+  </script>
   </script>
 </body>
 
