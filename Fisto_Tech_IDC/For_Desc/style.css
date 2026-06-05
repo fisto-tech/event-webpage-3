@@ -2059,9 +2059,9 @@ a[href*="google.com/maps"] {
     }
 }
 
-@media screen and (max-width: 398px) {
+@media screen and (max-width: 399.98px)  {
     .ui-arrow-next-page, .ui-arrow-previous-page {
-       top: 378px !important;
+       top: 397.5px !important;
     }
 
      .ui-arrow-next-page {
