@@ -975,6 +975,12 @@
                 transition: all 0.3s;
                 cursor: pointer;
               }
+              @media (max-width: 768px) {
+                .rc-dot {
+                  width: 6px;
+                  height: 6px;
+                }
+              }
 
               .rc-dot.active {
                 background-color: #64748b;
@@ -1025,8 +1031,8 @@
               <div class="flex items-center justify-center w-[100%] relative h-[200px]">
                 <!-- Left Button -->
                 <div id="rc-prev"
-                  class="bg-white rounded-full w-[clamp(28px,2.5vw,38px)] h-[clamp(28px,2.5vw,38px)] flex items-center justify-center shadow-lg cursor-pointer hover:bg-gray-100 z-[20] absolute left-[12%] top-[70%] md:top-[60%] lg:top-[50%] translate-y-[-50%]">
-                  <i class="fa-solid fa-chevron-left text-[clamp(14px,1.2vw,16px)] text-gray-700"></i>
+                  class="bg-white rounded-full w-[clamp(20px,2.5vw,38px)] h-[clamp(20px,2.5vw,38px)] flex items-center justify-center shadow-lg cursor-pointer hover:bg-gray-100 z-[20] absolute left-[12%] top-[80%] md:top-[60%] lg:top-[50%] translate-y-[-50%]">
+                  <i class="fa-solid fa-chevron-left text-[clamp(10px,1.2vw,16px)] text-gray-700"></i>
                 </div>
 
                 <!-- Cards Container -->
@@ -1041,8 +1047,8 @@
 
                 <!-- Right Button -->
                 <div id="rc-next"
-                  class="bg-white rounded-full w-[clamp(28px,2.5vw,38px)] h-[clamp(28px,2.5vw,38px)] flex items-center justify-center shadow-lg cursor-pointer hover:bg-gray-100 z-[20] absolute right-[12%] top-[70%] md:top-[60%] lg:top-[50%] translate-y-[-50%]">
-                  <i class="fa-solid fa-chevron-right text-[clamp(14px,1.2vw,16px)] text-gray-700"></i>
+                  class="bg-white rounded-full w-[clamp(20px,2.5vw,38px)] h-[clamp(20px,2.5vw,38px)] flex items-center justify-center shadow-lg cursor-pointer hover:bg-gray-100 z-[20] absolute right-[12%] top-[80%] md:top-[60%] lg:top-[50%] translate-y-[-50%]">
+                  <i class="fa-solid fa-chevron-right text-[clamp(10px,1.2vw,16px)] text-gray-700"></i>
                 </div>
               </div>
 
@@ -1354,15 +1360,15 @@
 
             <!-- Pagination area -->
             <div
-              class="absolute bottom-[3.5%] left-[5%] right-[5%] h-[14%] flex flex-row items-center justify-center gap-[4%] z-[10]">
+              class="absolute bottom-[3.5%] left-[2%] right-[2%] md:left-[5%] md:right-[5%] h-[14%] flex flex-row items-center justify-center gap-[3%] md:gap-[4%] z-[10]">
               <!-- Left Button -->
               <div id="wb-prev"
-                class="bg-white rounded-[50%] w-[5%] aspect-square flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 z-[20]">
-                <i class="fa-solid fa-chevron-left text-[80%] text-gray-700"></i>
+                class="bg-white rounded-[50%] w-[9%] sm:w-[7%] md:w-[5%] aspect-square flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 z-[20]">
+                <i class="fa-solid fa-chevron-left text-[3.2vw] sm:text-[2vw] md:text-[1vw] text-gray-700"></i>
               </div>
 
               <!-- Cards Container (Light Blue Background) -->
-              <div class="relative w-[45%] h-[100%] overflow-visible" id="wb-cards-container">
+              <div class="relative w-[60%] md:w-[45%] h-[100%] overflow-visible" id="wb-cards-container">
                 <img id="wb-card-0" src="./assets/images/water-bottle/500ml/500ml-bottom-card-img.svg"
                   class="wb-card-wrapper wb-card-center" />
                 <img id="wb-card-1" src="./assets/images/water-bottle/1ltr/1ltr-bottom-card-img.svg"
@@ -1373,8 +1379,8 @@
 
               <!-- Right Button -->
               <div id="wb-next"
-                class="bg-white rounded-[50%] w-[5%] aspect-square flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 z-[20]">
-                <i class="fa-solid fa-chevron-right text-[80%] text-gray-700"></i>
+                class="bg-white rounded-[50%] w-[9%] sm:w-[7%] md:w-[5%] aspect-square flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 z-[20]">
+                <i class="fa-solid fa-chevron-right text-[3.2vw] sm:text-[2vw] md:text-[1vw] text-gray-700"></i>
               </div>
             </div>
 

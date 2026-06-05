@@ -2045,12 +2045,26 @@ a[href*="google.com/maps"] {
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 400px) and (max-width: 480px) {
     .ui-arrow-next-page, .ui-arrow-previous-page {
-       top: 370px !important;
+       top: 410px !important;
     }
 
     .ui-arrow-next-page {
+        left: 150px !important;
+    }
+    
+    .ui-arrow-previous-page {
+        left: -67px !important;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .ui-arrow-next-page, .ui-arrow-previous-page {
+       top: 378px !important;
+    }
+
+     .ui-arrow-next-page {
         left: 150px !important;
     }
     
