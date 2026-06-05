@@ -63,14 +63,14 @@ document.addEventListener('keydown', function (e) {
 //     shareInput.select();
 // });
 
-    // hide share menu on body/overlay click or Esc
-    // document.addEventListener('click', e => {
-    //     if (shareMenu && !shareMenu.contains(e.target) && !shareBtn.contains(e.target))
-    //         shareMenu.classList.remove('show');
-    // });
-    // document.addEventListener('keydown', e => {
-    //     if (e.key === "Escape" && shareMenu) shareMenu.classList.remove('show');
-    // });
+// hide share menu on body/overlay click or Esc
+// document.addEventListener('click', e => {
+//     if (shareMenu && !shareMenu.contains(e.target) && !shareBtn.contains(e.target))
+//         shareMenu.classList.remove('show');
+// });
+// document.addEventListener('keydown', e => {
+//     if (e.key === "Escape" && shareMenu) shareMenu.classList.remove('show');
+// });
 
 
 // window.addEventListener('load', function () {
@@ -136,14 +136,14 @@ document.addEventListener('keydown', function (e) {
 
 function updateActiveThumbnail(currentPage) {
     const allLinks = document.querySelectorAll('.tb-link');
-    
+
     // Collect all data-page values and sort descending
     const pageValues = [];
     allLinks.forEach(item => {
         const p = parseInt(item.dataset.page);
         if (!isNaN(p)) pageValues.push(p);
     });
-    
+
     // Sort descending to find the closest page <= currentPage
     const sorted = [...new Set(pageValues)].sort((a, b) => b - a);
     const matchPage = sorted.find(p => p <= currentPage) || sorted[sorted.length - 1];
@@ -183,7 +183,7 @@ document.querySelectorAll('.tb-link').forEach(link => {
 });
 
 // Detect page change automatically in flipbook
-$('#flipbook').bind("turned", function(event, page) {
+$('#flipbook').bind("turned", function (event, page) {
     updateActiveThumbnail(page);
 });
 
@@ -208,7 +208,7 @@ function openMenu1() {
     tocNav1.classList.add('show');
     navOverlay1.classList.add('show');
     navToggle1.setAttribute('aria-expanded', 'true');
-}1
+} 1
 function closeMenu1() {
     navToggle1.classList.remove('open');
     tocNav1.classList.remove('show');
@@ -272,76 +272,76 @@ document.addEventListener('keydown', function (e) {
 
 
 
- const shareBtn = document.getElementById('shareBtn');
-        const shareModal = document.getElementById('shareModal');
-        const shareOverlay = document.getElementById('shareOverlay');
-        const closeBtn = document.getElementById('closeBtn');
-        const shareInput = document.getElementById('shareInput');
-        const copyBtn = document.getElementById('copyBtn');
-        const copiedMsg = document.getElementById('copiedMsg');
+const shareBtn = document.getElementById('shareBtn');
+const shareModal = document.getElementById('shareModal');
+const shareOverlay = document.getElementById('shareOverlay');
+const closeBtn = document.getElementById('closeBtn');
+const shareInput = document.getElementById('shareInput');
+const copyBtn = document.getElementById('copyBtn');
+const copiedMsg = document.getElementById('copiedMsg');
 
-        // Set link
-        shareInput.value = window.top.location.href;
+// Set link
+shareInput.value = window.top.location.href;
 
-        // Open modal
-        shareBtn.addEventListener('click', () => {
-            shareModal.classList.remove('hidden');
-            shareOverlay.classList.remove('hidden');
-            shareInput.select();
-        });
+// Open modal
+shareBtn.addEventListener('click', () => {
+    shareModal.classList.remove('hidden');
+    shareOverlay.classList.remove('hidden');
+    shareInput.select();
+});
 
-        // Close modal
-        const closeModal = () => {
-            shareModal.classList.add('hidden');
-            shareOverlay.classList.add('hidden');
-        };
+// Close modal
+const closeModal = () => {
+    shareModal.classList.add('hidden');
+    shareOverlay.classList.add('hidden');
+};
 
-        closeBtn.addEventListener('click', closeModal);
-        shareOverlay.addEventListener('click', closeModal);
+closeBtn.addEventListener('click', closeModal);
+shareOverlay.addEventListener('click', closeModal);
 
-        // Copy link
-        copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(shareInput.value).then(() => {
-                copiedMsg.classList.remove('hidden');
-                setTimeout(() => copiedMsg.classList.add('hidden'), 1500);
-            });
-        });
+// Copy link
+copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(shareInput.value).then(() => {
+        copiedMsg.classList.remove('hidden');
+        setTimeout(() => copiedMsg.classList.add('hidden'), 1500);
+    });
+});
 
-        // Social share functions
-        document.getElementById('whatsappBtn').addEventListener('click', () => {
-            const url = encodeURIComponent(shareInput.value);
-            window.open(`https://wa.me/?text=${url}`, '_blank');
-        });
+// Social share functions
+document.getElementById('whatsappBtn').addEventListener('click', () => {
+    const url = encodeURIComponent(shareInput.value);
+    window.open(`https://wa.me/?text=${url}`, '_blank');
+});
 
-        document.getElementById('twitterBtn').addEventListener('click', () => {
-            const url = encodeURIComponent(shareInput.value);
-            window.open(`https://twitter.com/intent/tweet?url=${url}`, '_blank');
-        });
+document.getElementById('twitterBtn').addEventListener('click', () => {
+    const url = encodeURIComponent(shareInput.value);
+    window.open(`https://twitter.com/intent/tweet?url=${url}`, '_blank');
+});
 
-        document.getElementById('facebookBtn').addEventListener('click', () => {
-            const url = encodeURIComponent(shareInput.value);
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-        });
+document.getElementById('facebookBtn').addEventListener('click', () => {
+    const url = encodeURIComponent(shareInput.value);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+});
 
-        // LinkedIn Share
+// LinkedIn Share
 document.getElementById('linkedInBtn').addEventListener('click', () => {
     const url = encodeURIComponent(shareInput.value);
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
 });
 
-        // document.getElementById('gmailBtn').addEventListener('click', () => {
-        //     const url = encodeURIComponent(shareInput.value);
-        //     window.open(`mailto:?subject=Check this out&body=${url}`, '_blank');
-        // });
+// document.getElementById('gmailBtn').addEventListener('click', () => {
+//     const url = encodeURIComponent(shareInput.value);
+//     window.open(`mailto:?subject=Check this out&body=${url}`, '_blank');
+// });
 
-        // document.getElementById('linkedinBtn').addEventListener('click', () => {
-        //     const url = encodeURIComponent(shareInput.value);
-        //     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
-        // });
+// document.getElementById('linkedinBtn').addEventListener('click', () => {
+//     const url = encodeURIComponent(shareInput.value);
+//     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+// });
 
-        // document.getElementById('instagramBtn').addEventListener('click', () => {
-        //     alert('Instagram sharing requires the app. Copy the link and share it manually.');
-        // });
+// document.getElementById('instagramBtn').addEventListener('click', () => {
+//     alert('Instagram sharing requires the app. Copy the link and share it manually.');
+// });
 
 //         document.getElementById('instagramBtn').addEventListener('click', () => {
 //     const url = encodeURIComponent(shareInput.value);
@@ -369,16 +369,16 @@ document.getElementById('linkedInBtn').addEventListener('click', () => {
 // });
 
 
-        // Close on Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
 
 
 
 
 
-        // ****************************share button navbar functionality end************************** 
+// ****************************share button navbar functionality end************************** 
 window.addEventListener('load', function () {
     const bgmAudio = document.getElementById('bgmAudio');
     bgmAudio.volume = 0.15;
@@ -447,22 +447,22 @@ window.addEventListener('load', function () {
 
 
 // *********************home button start**************
-    const goToPage1 = document.getElementById("goToPage1");
+const goToPage1 = document.getElementById("goToPage1");
 
-    goToPage1.addEventListener("click", function () {
-        if ($("#flipbook").turn) {
-            $("#flipbook").turn("page", 1);
-        }
+goToPage1.addEventListener("click", function () {
+    if ($("#flipbook").turn) {
+        $("#flipbook").turn("page", 1);
+    }
 
-        const audioPath = goToPage1.dataset.audioPath;
-        if (audioPath) {
-            const audio = new Audio(audioPath);
-            audio.play();
-        }
-    });
+    const audioPath = goToPage1.dataset.audioPath;
+    if (audioPath) {
+        const audio = new Audio(audioPath);
+        audio.play();
+    }
+});
 
 
-    // *********************home button end**************
+// *********************home button end**************
 
 
 
@@ -472,7 +472,7 @@ window.addEventListener('load', function () {
 //   // ✅ UPDATE PAGE COUNTER WITH LAST PAGE FIX
 //   const totalPages = $('#flipbook').turn('pages');
 //   const pageNoElement = document.getElementById('page-no');
-  
+
 //   if (pageNoElement) {
 //       if (page === 1) {
 //           // First page (cover)
@@ -488,7 +488,7 @@ window.addEventListener('load', function () {
 //           pageNoElement.textContent = `${page - 1}-${page} / ${totalPages}`;
 //       }
 //   }
-  
+
 //   // Update active thumbnail (your existing code)
 //   updateActiveThumbnail(page);
 // });
@@ -512,28 +512,28 @@ const closeSearchModal = document.getElementById('closeSearchModal');
 // Define your pages with search keywords
 const pages = [
     { page: 1, title: "Cover Page", keywords: ["cover", "front", "home", "title", "1"] },
-    { page: 2, title: "Introduction", keywords: [ "about us", "table of content"] },
-    { page: 4, title: "Chapter 1", keywords: [ "taper bush pulley"] },
-    
-    { page: 10, title: "Conclusion", keywords: [ "timing pulley"] },
-    { page: 13, title: "Cover Page", keywords: [ "poly v pulley"] },
-    { page: 17, title: "Introduction", keywords: [ "sprocket"] },
-    
-    { page: 24, title: "Chapter 2", keywords: ["couplings","tyre coupling"] },
-    
-    { page: 32, title: "Introduction", keywords: [ "gear coupling"] },
-    
-    { page: 37, title: "Chapter 2", keywords: [ "pin bush coupling"] },
-    
-    { page: 41, title: "Conclusion", keywords: [ "roller chain flexible coupling"] },
+    { page: 2, title: "Introduction", keywords: ["about us", "table of content"] },
+    { page: 4, title: "Chapter 1", keywords: ["taper bush pulley"] },
 
-    { page: 47, title: "Chapter 1", keywords: [ "curved jaw coupling"] },
+    { page: 10, title: "Conclusion", keywords: ["timing pulley"] },
+    { page: 13, title: "Cover Page", keywords: ["poly v pulley"] },
+    { page: 17, title: "Introduction", keywords: ["sprocket"] },
 
-    { page: 52, title: "Conclusion", keywords: [ "stright jaw coupling"] },
-    
-    { page: 56, title: "Introduction", keywords: [ "diverter wheels"] },
-    { page: 60, title: "Introduction", keywords: [ "contact us"] },
-    
+    { page: 24, title: "Chapter 2", keywords: ["couplings", "tyre coupling"] },
+
+    { page: 32, title: "Introduction", keywords: ["gear coupling"] },
+
+    { page: 37, title: "Chapter 2", keywords: ["pin bush coupling"] },
+
+    { page: 41, title: "Conclusion", keywords: ["roller chain flexible coupling"] },
+
+    { page: 47, title: "Chapter 1", keywords: ["curved jaw coupling"] },
+
+    { page: 52, title: "Conclusion", keywords: ["stright jaw coupling"] },
+
+    { page: 56, title: "Introduction", keywords: ["diverter wheels"] },
+    { page: 60, title: "Introduction", keywords: ["contact us"] },
+
 ];
 
 // ✅ CLOSE SEARCH FUNCTION
@@ -567,7 +567,7 @@ document.addEventListener('click', (e) => {
     // Check if click is outside the search modal AND the search icon
     const isClickInsideModal = searchModal.contains(e.target);
     const isClickOnIcon = searchIcon && searchIcon.contains(e.target);
-    
+
     // If click is outside modal and not on the search icon, close it
     if (!isClickInsideModal && !isClickOnIcon && !searchModal.classList.contains('hidden')) {
         closeSearch();
@@ -577,9 +577,9 @@ document.addEventListener('click', (e) => {
 // ✅ SEARCH INPUT - TYPE TO FILTER
 // ✅ SEARCH INPUT - TYPE TO FILTER
 if (searchInput) {
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         const query = this.value.toLowerCase().trim();
-        
+
         if (!query) {
             searchResults.innerHTML = '<p class="text-gray-500 text-center">Type to search pages...</p>';
             return;
@@ -594,10 +594,10 @@ if (searchInput) {
             if (isNumericQuery && page.page === queryAsNumber) {
                 return true;
             }
-            
+
             // Match by title or keywords
             return page.title.toLowerCase().includes(query) ||
-                   page.keywords.some(kw => kw.toString().toLowerCase().includes(query));
+                page.keywords.some(kw => kw.toString().toLowerCase().includes(query));
         });
 
         if (filtered.length === 0) {
@@ -629,7 +629,7 @@ if (searchInput) {
         if (e.key === 'Enter') {
             const query = searchInput.value.trim();
             const pageNum = parseInt(query);
-            
+
             // If it's a valid number, go directly to that page
             if (!isNaN(pageNum) && pageNum > 0) {
                 if ($('#flipbook').turn) {
@@ -638,7 +638,7 @@ if (searchInput) {
                 closeSearch();
                 return;
             }
-            
+
             // Otherwise, click first result
             const firstResult = document.querySelector('.search-result-item');
             if (firstResult) firstResult.click();
@@ -684,16 +684,16 @@ let isAnimating = false; // ✅ Prevent multiple flips during animation
 function applyZoom(zoomLevel) {
     currentZoom = zoomLevel;
     const scale = zoomLevel / 100;
-    
+
     // ✅ STEP 1A: Update zoom state
     isZoomed = scale > 1;
 
-  
-    
+
+
     if (flipbookContainer) {
         flipbookContainer.style.transform = `scale(${scale})`;
         flipbookContainer.style.transformOrigin = 'top center';
-        
+
         // ✅ STEP 1B: When zoomed, disable all clicks on flipbook
         if (isZoomed) {
             flipbookContainer.style.pointerEvents = 'none'; // ⚠️ CRITICAL
@@ -709,36 +709,36 @@ function applyZoom(zoomLevel) {
             if (wrapper) wrapper.scrollTop = 0;
         }
     }
-    
+
     zoomPercentage.textContent = `${zoomLevel}%`;
     zoomSlider.value = zoomLevel;
-    
+
 
 
     // ================= DISABLE / ENABLE ZOOM BUTTONS =================
-if (zoomOutBtn) {
-    if (zoomLevel <= 100) {
-        zoomOutBtn.style.pointerEvents = "none";
-        zoomOutBtn.style.opacity = "0.4";
-        zoomOutBtn.style.cursor = "not-allowed";
-    } else {
-        zoomOutBtn.style.pointerEvents = "auto";
-        zoomOutBtn.style.opacity = "1";
-        zoomOutBtn.style.cursor = "pointer";
+    if (zoomOutBtn) {
+        if (zoomLevel <= 100) {
+            zoomOutBtn.style.pointerEvents = "none";
+            zoomOutBtn.style.opacity = "0.4";
+            zoomOutBtn.style.cursor = "not-allowed";
+        } else {
+            zoomOutBtn.style.pointerEvents = "auto";
+            zoomOutBtn.style.opacity = "1";
+            zoomOutBtn.style.cursor = "pointer";
+        }
     }
-}
 
-if (zoomInBtn) {
-    if (zoomLevel >= 130) {
-        zoomInBtn.style.pointerEvents = "none";
-        zoomInBtn.style.opacity = "0.4";
-        zoomInBtn.style.cursor = "not-allowed";
-    } else {
-        zoomInBtn.style.pointerEvents = "auto";
-        zoomInBtn.style.opacity = "1";
-        zoomInBtn.style.cursor = "pointer";
+    if (zoomInBtn) {
+        if (zoomLevel >= 130) {
+            zoomInBtn.style.pointerEvents = "none";
+            zoomInBtn.style.opacity = "0.4";
+            zoomInBtn.style.cursor = "not-allowed";
+        } else {
+            zoomInBtn.style.pointerEvents = "auto";
+            zoomInBtn.style.opacity = "1";
+            zoomInBtn.style.cursor = "pointer";
+        }
     }
-}
 
 
 
@@ -756,37 +756,37 @@ function blockFlipWhenZoomed(e) {
 }
 
 // ==================== STEP 3: ZOOM BUTTON HANDLERS ====================
-zoomInBtn.addEventListener('click', function() {
+zoomInBtn.addEventListener('click', function () {
     if (currentZoom < 130) {
         currentZoom += 5;
         applyZoom(currentZoom);
     }
 });
 
-zoomOutBtn.addEventListener('click', function() {
+zoomOutBtn.addEventListener('click', function () {
     if (currentZoom > 100) {
         currentZoom -= 5;
         applyZoom(currentZoom);
     }
 });
 
-zoomSlider.addEventListener('input', function() {
+zoomSlider.addEventListener('input', function () {
     applyZoom(parseInt(this.value));
 });
 
 // ==================== STEP 4: MOUSE WHEEL ZOOM ====================
 let wheelTimeout;
-document.addEventListener('wheel', function(e) {
+document.addEventListener('wheel', function (e) {
     // ✅ Only zoom if Ctrl/Cmd is pressed
     if (e.ctrlKey || e.metaKey) {
         e.preventDefault();
-        
+
         clearTimeout(wheelTimeout);
-        
+
         const delta = e.deltaY > 0 ? -5 : 5;
         let newZoom = currentZoom + delta;
         newZoom = Math.max(100, Math.min(130, newZoom));
-        
+
         wheelTimeout = setTimeout(() => {
             applyZoom(newZoom);
         }, 10);
@@ -794,7 +794,7 @@ document.addEventListener('wheel', function(e) {
 }, { passive: false });
 
 // ==================== STEP 5: KEYBOARD SHORTCUTS ====================
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     // Ctrl/Cmd + Plus
     if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '=')) {
         e.preventDefault();
@@ -803,7 +803,7 @@ document.addEventListener('keydown', function(e) {
             applyZoom(currentZoom);
         }
     }
-    
+
     // Ctrl/Cmd + Minus
     if ((e.ctrlKey || e.metaKey) && e.key === '-') {
         e.preventDefault();
@@ -812,7 +812,7 @@ document.addEventListener('keydown', function(e) {
             applyZoom(currentZoom);
         }
     }
-    
+
     // Ctrl/Cmd + 0 to reset
     if ((e.ctrlKey || e.metaKey) && e.key === '0') {
         e.preventDefault();
@@ -835,7 +835,7 @@ flipbookContainer.addEventListener('mousedown', blockFlipWhenZoomed, true);
 flipbookContainer.addEventListener('touchstart', blockFlipWhenZoomed, true);
 
 // ==================== STEP 7: PREVENT PAGE TURN.JS EVENTS ====================
-$('#flipbook').bind('turning', function(e) {
+$('#flipbook').bind('turning', function (e) {
     // ✅ If zoomed, prevent the turn event
     if (isZoomed) {
         e.preventDefault();
@@ -844,7 +844,7 @@ $('#flipbook').bind('turning', function(e) {
 });
 
 // ==================== STEP 8: SCROLL FUNCTIONALITY ====================
-wrapper.addEventListener('scroll', function(e) {
+wrapper.addEventListener('scroll', function (e) {
     if (!isZoomed) {
         e.preventDefault();
         wrapper.scrollTop = 0;
@@ -852,13 +852,13 @@ wrapper.addEventListener('scroll', function(e) {
 });
 
 // ==================== STEP 9: HIDE SCROLLBAR DURING NORMAL FLIPS ====================
-$('#flipbook').bind('turning', function() {
+$('#flipbook').bind('turning', function () {
     if (wrapper && !isZoomed) {
         wrapper.classList.add('no-scrollbar');
     }
 });
 
-$('#flipbook').bind('turned', function() {
+$('#flipbook').bind('turned', function () {
     if (wrapper && !isZoomed) {
         setTimeout(() => {
             wrapper.classList.remove('no-scrollbar');
@@ -869,7 +869,7 @@ $('#flipbook').bind('turned', function() {
 // ==================== STEP 10: ZOOM FEEDBACK ====================
 function showZoomFeedback(level) {
     let feedback = document.getElementById('zoom-feedback');
-    
+
     if (!feedback) {
         feedback = document.createElement('div');
         feedback.id = 'zoom-feedback';
@@ -891,10 +891,10 @@ function showZoomFeedback(level) {
         `;
         document.body.appendChild(feedback);
     }
-    
+
     feedback.textContent = `${level}%`;
     feedback.style.opacity = '1';
-    
+
     clearTimeout(feedback.hideTimer);
     feedback.hideTimer = setTimeout(() => {
         feedback.style.opacity = '0';
@@ -920,12 +920,12 @@ function showZoomAlert(message) {
     let alertBox = document.getElementById('zoom-alert-box');
 
     // ================= CREATE OVERLAY =================
-let alertOverlay = document.getElementById('zoom-alert-overlay');
+    let alertOverlay = document.getElementById('zoom-alert-overlay');
 
-if (!alertOverlay) {
-    alertOverlay = document.createElement('div');
-    alertOverlay.id = 'zoom-alert-overlay';
-    alertOverlay.style.cssText = `
+    if (!alertOverlay) {
+        alertOverlay = document.createElement('div');
+        alertOverlay.id = 'zoom-alert-overlay';
+        alertOverlay.style.cssText = `
         position: fixed;
         inset: 0;
         background: rgba(0, 0, 0, 0.45);
@@ -934,10 +934,10 @@ if (!alertOverlay) {
         transition: opacity 0.3s ease;
         pointer-events: none;
     `;
-    document.body.appendChild(alertOverlay);
-}
+        document.body.appendChild(alertOverlay);
+    }
 
-    
+
     if (!alertBox) {
         alertBox = document.createElement('div');
         alertBox.id = 'zoom-alert-box';
@@ -962,31 +962,31 @@ if (!alertOverlay) {
         `;
         document.body.appendChild(alertBox);
     }
-    
+
     alertBox.textContent = message;
     alertBox.style.opacity = '1';
     alertBox.style.pointerEvents = 'all';
     alertOverlay.style.opacity = '1';
-alertOverlay.style.pointerEvents = 'auto';
+    alertOverlay.style.pointerEvents = 'auto';
 
-    
+
     clearTimeout(alertBox.hideTimer);
     alertBox.hideTimer = setTimeout(() => {
         alertBox.style.opacity = '0';
     }, 2500);
 
     alertBox.hideTimer = setTimeout(() => {
-    alertBox.style.opacity = '0';
-    alertOverlay.style.opacity = '0';
-    alertOverlay.style.pointerEvents = 'none';
-}, 2500);
+        alertBox.style.opacity = '0';
+        alertOverlay.style.opacity = '0';
+        alertOverlay.style.pointerEvents = 'none';
+    }, 2500);
 
 }
 
 // ✅ STEP 2: FIX SEARCH ICON ALERT
 const searchIconElement = document.querySelector('img[alt="search-icon"]');
 if (searchIconElement) {
-    searchIconElement.addEventListener('click', function(e) {
+    searchIconElement.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1002,7 +1002,7 @@ if (searchIconElement) {
 // ✅ STEP 3: FIX TOP NAVBAR ALERT
 const navToggleElement = document.getElementById('navToggle');
 if (navToggleElement) {
-    navToggleElement.addEventListener('click', function(e) {
+    navToggleElement.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1018,7 +1018,7 @@ if (navToggleElement) {
 // ✅ STEP 4: FIX BOTTOM NAVBAR/THUMBNAIL ALERT
 const navToggleElement1 = document.getElementById('navToggle1');
 if (navToggleElement1) {
-    navToggleElement1.addEventListener('click', function(e) {
+    navToggleElement1.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1033,7 +1033,7 @@ if (navToggleElement1) {
 
 // ✅ STEP 5: FIX THUMBNAIL LINK CLICKS
 document.querySelectorAll('.tb-link').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1050,7 +1050,7 @@ document.querySelectorAll('.tb-link').forEach(link => {
 // ✅ STEP 9: FIX AUTOPLAY BUTTON - BLOCK AND DISABLE
 const autoPlayBtnElement = document.getElementById('autoPlayBtn');
 if (autoPlayBtnElement) {
-    autoPlayBtnElement.addEventListener('click', function(e) {
+    autoPlayBtnElement.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1060,13 +1060,13 @@ if (autoPlayBtnElement) {
             return false;
         }
     }, true);
-    
+
     // Also disable autoplay progress bar interaction when zoomed
     const autoPlayProgressFillElement = document.getElementById('autoPlayProgressFill');
     const progressContainerElement = document.querySelector('.autoplay-progress-container');
-    
+
     if (progressContainerElement) {
-        progressContainerElement.addEventListener('click', function(e) {
+        progressContainerElement.addEventListener('click', function (e) {
             if (isZoomed) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -1084,13 +1084,13 @@ if (autoPlayBtnElement) {
 // ✅ STEP 11: FIX HOME BUTTON ALERT
 const goToPage1Element = document.getElementById('goToPage1');
 if (goToPage1Element) {
-    goToPage1Element.addEventListener('click', function(e) {
+    goToPage1Element.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
             e.stopImmediatePropagation();
             showZoomAlert(' Cannot navigate while zoomed, Please zoom out first');
-            
+
             return false;
         }
     }, true);
@@ -1102,7 +1102,7 @@ const leftArrowElement = document.getElementById('leftArrow');
 const rightArrowElement = document.getElementById('rightArrow');
 
 if (leftArrowElement) {
-    leftArrowElement.addEventListener('click', function(e) {
+    leftArrowElement.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1114,7 +1114,7 @@ if (leftArrowElement) {
 }
 
 if (rightArrowElement) {
-    rightArrowElement.addEventListener('click', function(e) {
+    rightArrowElement.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1128,29 +1128,29 @@ if (rightArrowElement) {
 
 // ✅ STEP 13: BLOCK AUTOPLAY WHEN ZOOMING IN
 const originalApplyZoom = window.applyZoom;
-window.applyZoom = function(zoomLevel) {
+window.applyZoom = function (zoomLevel) {
     const wasZoomed = isZoomed;
     const scale = zoomLevel / 100;
     const willBeZoomed = scale > 1;
-    
+
     // If zooming in and autoplay is running, stop it
     if (!wasZoomed && willBeZoomed && isAutoPlaying) {
         stopAutoPlay();
         // showZoomAlert(' Autoplay stopped, Zoom activated');
     }
-    
+
     // If zooming out, show success
     if (wasZoomed && !willBeZoomed) {
         // showZoomAlert(' Zoom disabled, Navigate normally now');
     }
-    
+
     // Call original function
     originalApplyZoom.call(this, zoomLevel);
 };
 
 // ✅ STEP 14: PREVENT DIRECT FLIPBOOK CLICKS WHEN ZOOMED
 if (flipbookContainer) {
-    flipbookContainer.addEventListener('click', function(e) {
+    flipbookContainer.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1163,7 +1163,7 @@ if (flipbookContainer) {
 
 // ✅ STEP 15: PREVENT UI-ARROW CONTROLS WHEN ZOOMED
 document.querySelectorAll('.ui-arrow-control').forEach(arrow => {
-    arrow.addEventListener('click', function(e) {
+    arrow.addEventListener('click', function (e) {
         if (isZoomed) {
             e.preventDefault();
             e.stopPropagation();
@@ -1176,7 +1176,7 @@ document.querySelectorAll('.ui-arrow-control').forEach(arrow => {
 // console.log('✅ UI arrow controls protection added');
 
 // ✅ STEP 16: DISABLE MOUSE/TOUCHPAD SCROLL WHEN ZOOMED
-document.addEventListener('mousewheel', function(e) {
+document.addEventListener('mousewheel', function (e) {
     // Allow zoom with Ctrl
     if (e.ctrlKey || e.metaKey) {
         return; // Zoom is allowed
@@ -1213,7 +1213,7 @@ let pausedTime = 0;
 let isDragging = false;
 
 // Initialize
-$(document).ready(function() {
+$(document).ready(function () {
     totalPages = $('#flipbook').turn ? $('#flipbook').turn('pages') : 12;
     const currentPage = $('#flipbook').turn('page') || 1;
     currentProgress = getProgressFromPage(currentPage);
@@ -1241,7 +1241,7 @@ function updateProgressBar(percentage) {
 // ✅ FIXED: Recursive requestAnimationFrame
 function animateProgress() {
     if (!isAutoPlaying) return; // Stop if not playing
-    
+
     const currentTime = Date.now();
     elapsedTime = pausedTime + (currentTime - startTime);
     const totalDuration = getDuration();
@@ -1250,23 +1250,23 @@ function animateProgress() {
     if (currentProgress > 100) currentProgress = 100;
 
     updateProgressBar(currentProgress);
-    
+
     const targetPage = Math.min(Math.floor(elapsedTime / pageWaitTime) + 1, totalPages);
     const currentPage = $('#flipbook').turn('page');
-    
+
     if (targetPage !== currentPage && targetPage <= totalPages) {
         $('#flipbook').turn('page', targetPage);
     }
-    
+
     if (currentProgress >= 100) {
         if ($('#flipbook').turn('page') !== totalPages) {
-             $('#flipbook').turn('page', totalPages);
+            $('#flipbook').turn('page', totalPages);
         }
         stopAutoPlay();
         updateProgressBar(100);
         return; // Exit loop
     }
-    
+
     // ✅ Continue animation - this is the key recursive call
     animationFrameId = requestAnimationFrame(animateProgress);
 }
@@ -1283,9 +1283,9 @@ function startAutoPlay() {
     autoPlayBtn.classList.add('playing');
     playIcon.classList.add('hidden');
     pauseIcon.classList.remove('hidden');
-    
+
     startTime = Date.now();
-    
+
     // ✅ Start the animation loop
     animationFrameId = requestAnimationFrame(animateProgress);
 }
@@ -1295,17 +1295,17 @@ function stopAutoPlay() {
     autoPlayBtn.classList.remove('playing');
     playIcon.classList.remove('hidden');
     pauseIcon.classList.add('hidden');
-        
+
     if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
     }
-    
+
     pausedTime = elapsedTime;
 }
 
 // Toggle auto play
-autoPlayBtn.addEventListener('click', function() {
+autoPlayBtn.addEventListener('click', function () {
     if (isAutoPlaying) {
         stopAutoPlay();
     } else {
@@ -1316,31 +1316,31 @@ autoPlayBtn.addEventListener('click', function() {
 // ✅ DRAGGABLE THUMB FUNCTIONALITY
 let startDragX = 0;
 
-autoPlayThumb.addEventListener('mousedown', function(e) {
+autoPlayThumb.addEventListener('mousedown', function (e) {
     isDragging = true;
     startDragX = e.clientX;
     if (isAutoPlaying) stopAutoPlay();
     e.preventDefault();
 });
 
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove', function (e) {
     if (!isDragging) return;
-    
+
     const containerRect = progressContainer.getBoundingClientRect();
     const offsetX = e.clientX - containerRect.left;
     const percentage = (offsetX / containerRect.width) * 100;
-    
+
     currentProgress = Math.min(Math.max(percentage, 0), 100);
     updateProgressBar(currentProgress);
-    
+
     const targetPage = Math.max(1, Math.min(Math.ceil((currentProgress / 100) * totalPages), totalPages));
-    
+
     if ($('#flipbook').turn && $('#flipbook').turn('page') !== targetPage) {
         $('#flipbook').turn('page', targetPage);
     }
 });
 
-document.addEventListener('mouseup', function() {
+document.addEventListener('mouseup', function () {
     if (isDragging) {
         isDragging = false;
         pausedTime = (currentProgress / 100) * getDuration();
@@ -1349,34 +1349,34 @@ document.addEventListener('mouseup', function() {
 });
 
 // Click on progress bar to jump
-progressContainer.addEventListener('click', function(e) {
+progressContainer.addEventListener('click', function (e) {
     if (isDragging) return;
-    
+
     const rect = this.getBoundingClientRect();
     const offsetX = e.clientX - rect.left;
     const percentage = (offsetX / rect.width) * 100;
-    
+
     currentProgress = Math.min(Math.max(percentage, 0), 100);
     updateProgressBar(currentProgress);
-    
+
     const targetPage = Math.max(1, Math.min(Math.ceil((currentProgress / 100) * totalPages), totalPages));
     if ($('#flipbook').turn) {
         $('#flipbook').turn('page', targetPage);
     }
-    
+
     pausedTime = (currentProgress / 100) * getDuration();
     elapsedTime = pausedTime;
-    
+
     if (isAutoPlaying) {
         stopAutoPlay();
     }
 });
 
 // Update on page turn
-$('#flipbook').bind('turned', function(event, page) {
+$('#flipbook').bind('turned', function (event, page) {
     const totalPagesCount = $('#flipbook').turn('pages');
     const pageNoElement = document.getElementById('page-no');
-    
+
     if (pageNoElement) {
         if (page === 1) {
             pageNoElement.textContent = `1 / ${totalPagesCount}`;
@@ -1388,15 +1388,15 @@ $('#flipbook').bind('turned', function(event, page) {
             pageNoElement.textContent = `${page - 1}-${page} / ${totalPagesCount}`;
         }
     }
-    
-    if(typeof updateActiveThumbnail === 'function') {
+
+    if (typeof updateActiveThumbnail === 'function') {
         updateActiveThumbnail(page);
     }
-    
+
     if (!isAutoPlaying && !isDragging) {
         const idealPageProgress = getProgressFromPage(page);
         const diff = Math.abs(currentProgress - idealPageProgress);
-        
+
         if (diff > (100 / totalPages) / 2) {
             currentProgress = idealPageProgress;
             updateProgressBar(currentProgress);
@@ -1460,9 +1460,9 @@ function updateArrows(page) {
     if (isAutoPlaying) {
         leftArrow.classList.add("hidden");
         rightArrow.classList.add("hidden");
-        return; 
-    }else{
-         leftArrow.classList.remove("hidden");
+        return;
+    } else {
+        leftArrow.classList.remove("hidden");
         rightArrow.classList.remove("hidden");
     }
 
@@ -1545,11 +1545,11 @@ function refreshArrows() {
     if (page === 1) {
         leftArrow.classList.add("hidden");
         rightArrow.classList.remove("hidden");
-    } 
+    }
     else if (page === totalPages) {
         leftArrow.classList.remove("hidden");
         rightArrow.classList.add("hidden");
-    } 
+    }
     else {
         leftArrow.classList.remove("hidden");
         rightArrow.classList.remove("hidden");
