@@ -221,18 +221,7 @@
     }
   </style>
   <style>
-    /* Mobile & Tablet background override */
-    /* @media (max-width: 1024px) {
-    .catalog-app {
-      background-image: url('../global assets/icons/background-mobile-img.webp') !important;
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-    }
-     body{
-      background-image: url('../global assets/icons/background-mobile-img.webp') !important;
-    }
-  } */
+  
   </style>
 </head>
 
@@ -256,16 +245,12 @@
         id="navToggle1" class=" absolute top-[50%] left-[2%] w-[2vw] h-[2vw] cursor-pointer z-[910]"
         style="transform: translateY(-50%);" />
       <img src="../global-assets/navbar-icons/share-icon.svg" title="share" alt="share-icon" id="shareBtn"
-        class="absolute top-[50%] left-[34%] cursor-pointer w-[2vw] h-[2vw]  z-[910]"
-        style="transform: translateY(-50%);" />
-
-      <img src="../global-assets/navbar-icons/full-screen-icon.svg" title="full screen" alt="full-screen-icon"
-        id="full-screen-btn" class="absolute top-[50%] right-[2%] cursor-pointer w-[2vw] h-[2vw] full-screen  z-[910]"
+        class="absolute top-[50%] right-[2%] cursor-pointer w-[2vw] h-[2vw] z-[910]"
         style="transform: translateY(-50%);" />
 
       <!-- ********************************Audio button start****************************************  -->
-      <div class="bgm-container absolute top-[55%] left-[37%] cursor-pointer  z-[910]"
-        style="transform: translateY(-50%);">
+      <div class="bgm-container absolute top-[50%] left-[40%] cursor-pointer z-[910]"
+        style="transform: translate(-50%, -50%);">
         <audio id="bgmAudio" loop>
           <source src="../audios/Lights(chosic.com).mp3" type="audio/wav">
         </audio>
@@ -279,13 +264,13 @@
 
       <!-- ********************************Audio button end****************************************  -->
 
-      <div class="absolute top-[50%] left-[48%]  text-white  text-[3vw] md:text-[1.5vw] lg:text-[.8vw]  z-[910]" title="page No"
-        style="transform: translateY(-50%);">
+      <div class="absolute top-[50%] left-[50%] text-white text-[3vw] md:text-[1.5vw] lg:text-[.8vw] z-[910]" title="page No"
+        style="transform: translate(-50%, -50%);">
         <p>Page <span id="page-no"></span></p>
       </div>
 
       <!-- Zoom Control Widget -->
-      <div class="zoom-control-container top-[50%]  z-[910]" style="transform: translateY(-50%);">
+      <div class="zoom-control-container top-[50%] z-[910]" style="transform: translate(-50%, -50%);">
         <button id="zoomOutBtn" class="zoom-btn" title="Zoom Out">
 
           <img src="../global assets/icons/zoom-out-icon.svg" title="zoom out" class="w-[1.5vw]" />
@@ -1992,7 +1977,7 @@
                 <div class="flex justify-center gap-[4%] w-full z-20 pointer-events-auto mb-[3%]">
                   <a href="https://www.linkedin.com/company/82545817" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/linked-in-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
-                  <a href="https://www.facebook.com/people/Fist-o-AR" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
+                  <a href="https://www.facebook.com/fist.o.ar/" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/facebook-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
                   <a href="https://www.instagram.com/fisto_ar?igsh=ZWRlZ2ZjY3F0dmVi" target="_blank" class="w-[7.5%] hover:scale-110 transition-transform"><img
                       src="./assets/images/thankyou/instagram-icon.svg" class="w-full h-auto drop-shadow-md" /></a>
@@ -2086,7 +2071,7 @@
                           src="./assets/images/contact-page/instagram-icon.svg" class="w-full object-contain" /></a>
                       <a href="https://www.linkedin.com/company/82545817" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
                           src="./assets/images/contact-page/linkedin-icon.svg" class="w-full object-contain" /></a>
-                      <a href="https://www.facebook.com/people/Fist-o-AR" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
+                      <a href="https://www.facebook.com/fist.o.ar/" target="_blank" class="w-[15%] hover:scale-110 transition-transform"><img
                           src="./assets/images/contact-page/facebook-icon.svg" class="w-full object-contain" /></a>
                     </div>
                   </div>
@@ -2286,8 +2271,7 @@
     $(document).on('keydown', function (event) {
       console.log('Key pressed:', event.key);
       if ((event.key === 'Escape' || event.keyCode === 27) && isFullscreen) {
-        isFullscreen = false;
-        fsBtn.src = fullIcon;
+        if (fsBtn) fsBtn.src = fullIcon;
         window.parent.postMessage({ action: "toggleFullscreen" }, "*");
       }
     });
@@ -2445,15 +2429,15 @@
     $('.full-screen').on('click', function () {
 
       // Immediately change icon (optimistic)
-      const isCurrentlyFullscreen = fsBtn.src.includes('normal-screen-icon');
+      const isCurrentlyFullscreen = fsBtn && fsBtn.src.includes('normal-screen-icon');
 
       if (isCurrentlyFullscreen) {
-        fsBtn.src = "../global-assets/navbar-icons/full-screen-icon.svg";
-        fsBtn.title = "Full Screen";
+        if (fsBtn) fsBtn.src = "../global-assets/navbar-icons/full-screen-icon.svg";
+        if (fsBtn) fsBtn.title = "Full Screen";
         finalState = true;
       } else {
-        fsBtn.src = "../global-assets/navbar-icons/normal-screen-icon.svg";
-        fsBtn.title = "Exit Full Screen";
+        if (fsBtn) fsBtn.src = "../global-assets/navbar-icons/normal-screen-icon.svg";
+        if (fsBtn) fsBtn.title = "Exit Full Screen";
         finalState = false;
       }
 
@@ -2468,12 +2452,12 @@
         const state = event.data.fullscreen;
 
         if (state) {
-          fsBtn.src = "../global assets/icons/normal-screen-icon.svg";
-          fsBtn.title = "Exit Full Screen";
+          if (fsBtn) fsBtn.src = "../global assets/icons/normal-screen-icon.svg";
+          if (fsBtn) fsBtn.title = "Exit Full Screen";
           console.log("IFRAME: Fullscreen confirmed");
         } else {
-          fsBtn.src = "../global assets/icons/full-screen-icon.svg";
-          fsBtn.title = "Full Screen";
+          if (fsBtn) fsBtn.src = "../global assets/icons/full-screen-icon.svg";
+          if (fsBtn) fsBtn.title = "Full Screen";
           console.log("IFRAME: Normal screen confirmed");
         }
       }
@@ -2486,8 +2470,8 @@
 
       if (finalState) {
 
-        fsBtn.src = "../global-assets/navbar-icons/full-screen-icon.svg";
-        fsBtn.title = "Full Screen";
+        if (fsBtn) fsBtn.src = "../global-assets/navbar-icons/full-screen-icon.svg";
+        if (fsBtn) fsBtn.title = "Full Screen";
         console.log("Resize: Normal → Fullscreen Icon");
 
       }
@@ -2502,15 +2486,15 @@
     // =============================================
     (function () {
 
-      var mapsURL = "https://www.google.com/maps?q=AIRLOCK+INDIA+PVT.+LTD.,+1/15-8,+Annur+Road,+Arasur,+Ponnandhampalayam,+Thennampalayam,+Tamil+Nadu+641107";
+      var mapsURL = "https://www.google.com/maps?q=FISTO+TECH";
       var phoneNumber = "tel:+914226678535";           // ← replace with real number
-      var emailAddress = "mailto:sales@airlockintl.co.in"; // ← replace with real email
+      var emailAddress = "mailto:sales@fistotech.com"; // ← replace with real email
       var whatsappURL = "https://wa.me/919XXXXXXXXX";  // ← replace with real number
-      var instagramURL = "https://www.instagram.com/airlockindia?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D";
+      var instagramURL = "https://www.instagram.com/fisto_ar?igsh=ZWRlZ2ZjY3F0dmVi";
       var facebookURL = "https://www.facebook.com/YOUR_PAGE";
       var youtubeURL = "https://www.youtube.com/@YOUR_CHANNEL";
       var linkedinURL = "https://www.linkedin.com/company/YOUR_COMPANY";
-      var websiteURL = "https://www.airlockindia.com"; // ← replace with real website
+      var websiteURL = "https://www.fistotech.com"; // ← replace with real website
 
       var buttons = [
         { id: "locationBtn", url: mapsURL },
@@ -2719,31 +2703,7 @@
       });
     });
   </script>
-  <script>
-    /* Fullscreen Hint Logic */
-    (function () {
-      const fsHint = document.createElement('div');
-      fsHint.id = 'fs-hint-container';
-      fsHint.innerHTML = `
-        
-        <span>Click the Fullscreen icon for the best experience</span>
-      `;
-      document.body.appendChild(fsHint);
 
-      function showHint() {
-        fsHint.classList.add('visible');
-        setTimeout(() => {
-          fsHint.classList.remove('visible');
-        }, 10000); // Display for 10 seconds
-      }
-
-      // Initial show on load
-      showHint();
-
-      // Repeat every 5 minutes (180000 ms)
-      setInterval(showHint, 300000);
-    })();
-  </script>
 
   <style>
     @keyframes modalReveal {

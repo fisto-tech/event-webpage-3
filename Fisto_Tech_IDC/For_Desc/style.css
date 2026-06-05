@@ -940,7 +940,7 @@ select:focus {
 .zoom-control-container {
     position: absolute;
     /* top: -5%; */
-    left: 61%;
+    left: 60%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -2041,5 +2041,20 @@ a[href*="google.com/maps"] {
     .shadow-mobile {
         left: -4% !important;
         transform: rotate(180deg);
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .ui-arrow-next-page, .ui-arrow-previous-page {
+       top: 370px !important;
+    }
+
+    .ui-arrow-next-page {
+        left: 150px !important;
+    }
+    
+    .ui-arrow-previous-page {
+        left: -67px !important;
     }
 }
