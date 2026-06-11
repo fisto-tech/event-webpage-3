@@ -158,6 +158,58 @@ select:focus {
     background: #000000;
 }
 
+/* --- Custom Tooltip Styles --- */
+.custom-tooltip-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-tooltip-container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8vw;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.custom-tooltip-container::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.custom-tooltip-container:hover::after,
+.custom-tooltip-container:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
 /* --- Floating TOC Styles --- */
 .toc-floating {
     position: fixed;
@@ -577,34 +629,33 @@ select:focus {
 /* ******************* bottom thumanail css code*************************  */
 
 
-/* --- Floating TOC Styles --- */
+/* -----------nav-toc scrollable------------- */
 .toc-floating1 {
     position: fixed;
-    /* top: 3.25%;
-    left: 6%; */
-    bottom: 10%;
-    left: 20%;
-    /* min-width: 228px;
-    max-width: 96vw; */
+    bottom: 8%;
+    left: 38.5%;
+    transform: translateX(-50%) translateY(24px) scale(0.97);
+    height: 80%;
+    width: 20%;
+    min-width: 200px;
+    max-width: 250px;
     background: #D3D6DB;
-    /* white background */
-    padding: 23px 22px 17px 22px;
+    padding: 15px 15px;
     border-radius: 18px;
     box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
-    border: 2px solid #000000;
-    /* dark green border */
     border: none;
     z-index: 1001;
     opacity: 0;
-    transform: translateY(24px) scale(0.97);
     pointer-events: none;
     transition: opacity .32s cubic-bezier(.7, -0.26, .8, 1.42), transform .33s cubic-bezier(.7, -0.26, .8, 1.42);
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .toc-floating1.show {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateX(-50%) translateY(0) scale(1);
     pointer-events: auto;
     visibility: visible;
 }
@@ -619,8 +670,38 @@ select:focus {
 
 .toc-list1 {
     list-style: none;
-    padding: 0;
+    padding: 0 0 10px 0;
     margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+}
+
+/* Scrollbar for .toc-list1 */
+.toc-list1::-webkit-scrollbar {
+    width: 8px; /* vertical scrollbar width */
+}
+
+.toc-list1::-webkit-scrollbar-track {
+    background: #74777a;
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+}
+
+.toc-list1::-webkit-scrollbar-thumb {
+    background: #034EA2;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.toc-list1::-webkit-scrollbar-thumb:hover {
+    background: #073a86;
 }
 
 .toc-list1 .active {
@@ -684,84 +765,7 @@ select:focus {
 
 
 
-/* -----------nav-toc scrollable------------- */
-
-
-.toc-floating1 {
-    position: fixed;
-    bottom: 6%;
-    left: 2%;
-    height: 80%;
-    /* Left corner positioning */
-    /* min-width: 228px; */
-    width: 15%;
-    min-width: 200px;
-    max-width: 250px;
-    /* background: #fff; */
-    padding: 23px 22px 17px 22px;
-    border-radius: 18px;
-    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
-    /* border: 2px solid #000000; */
-    z-index: 1001;
-    opacity: 0;
-    transform: translateY(24px) scale(0.97);
-    pointer-events: none;
-    transition: opacity .32s cubic-bezier(.7, -0.26, .8, 1.42),
-        transform .33s cubic-bezier(.7, -0.26, .8, 1.42);
-    visibility: hidden;
-    max-height: 80%;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.toc-title1 {
-    flex-shrink: 0;
-    /* keep title fixed */
-}
-
-.toc-list1 {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    /* centers the element */
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-    overflow-x: hidden;
-    /* remove horizontal scroll */
-    overflow-y: auto;
-    /* enable vertical scroll */
-    max-height: 80vh;
-    white-space: normal;
-    /* allows wrapping */
-}
-
-/* Scrollbar for .toc-list1 */
-.toc-list1::-webkit-scrollbar {
-    width: 8px;
-    /* vertical scrollbar width */
-}
-
-.toc-list1::-webkit-scrollbar-track {
-    background: #74777a;
-    /* light blur-like effect */
-    backdrop-filter: blur(6px);
-    border-radius: 10px;
-}
-
-.toc-list1::-webkit-scrollbar-thumb {
-    background: #034EA2;
-    /* soft gray blur */
-    backdrop-filter: blur(8px);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.25);
-}
-
-.toc-list1::-webkit-scrollbar-thumb:hover {
-    background: #073a86;
-}
+/* Deleted duplicate toc-floating1 and toc-list1 blocks */
 
 
 
@@ -938,19 +942,10 @@ select:focus {
 
 /* Zoom Control Container */
 .zoom-control-container {
-    position: absolute;
-    /* top: -5%; */
-    left: 62%;
-    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    /* gap: 12px; */
-    /* background: rgba(40, 40, 40, 0.95); */
-    padding: 12px 20px;
-    /* border-radius: 50px; */
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
+    padding: 6px 10px;
     z-index: 900;
-    /* backdrop-filter: blur(10px); */
 }
 
 /* Zoom Buttons */

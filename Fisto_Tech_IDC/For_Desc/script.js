@@ -1,30 +1,11 @@
-const navToggle = document.getElementById('navToggle');
-const tocNav = document.getElementById('tocNav');
-const navOverlay = document.getElementById('navOverlay');
-function openMenu() {
-    navToggle.classList.add('open');
-    tocNav.classList.add('show');
-    navOverlay.classList.add('show');
-    navToggle.setAttribute('aria-expanded', 'true');
-}
-function closeMenu() {
-    navToggle.classList.remove('open');
-    tocNav.classList.remove('show');
-    navOverlay.classList.remove('show');
-    navToggle.setAttribute('aria-expanded', 'false');
-}
-navToggle.addEventListener('click', function () {
-    if (tocNav.classList.contains('show')) closeMenu();
-    else openMenu();
-});
-navOverlay.addEventListener('click', closeMenu);
-document.querySelectorAll('.toc-list a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-// Keyboard: ESC to close
-document.addEventListener('keydown', function (e) {
-    if (e.key === "Escape") closeMenu();
-});
+// Table of Contents logic (button removed)
+// const navToggle = document.getElementById('navToggle');
+// const tocNav = document.getElementById('tocNav');
+// const navOverlay = document.getElementById('navOverlay');
+// function openMenu() { ... }
+// function closeMenu() { ... }
+// navToggle.addEventListener('click', ...);
+// navOverlay.addEventListener('click', closeMenu);
 
 
 // SHARE BUTTON LOGIC
