@@ -53,10 +53,10 @@
     document.body.classList.add('is-loaded');
     document.body.classList.remove('is-loading');
     sessionStorage.setItem(PRELOADER_SESSION_KEY, 'true');
+    initAOS(); // Start animations immediately while preloader fades out
     // Allow CSS transition to finish, then remove from DOM
     window.setTimeout(() => {
       preloader.remove();
-      initAOS();
     }, 550);
   };
 
@@ -137,13 +137,15 @@
       };
     
       $card.addEventListener('mouseenter', () => {
+        // Remove AOS delay so it doesn't interfere with continuous hover updates
+        $card.style.setProperty('transition-delay', '0ms', 'important');
         bounds = $card.getBoundingClientRect();
         $card.classList.remove('returning'); // Remove snap-back transition
-        document.addEventListener('mousemove', rotateToMouse);
+        $card.addEventListener('mousemove', rotateToMouse);
       });
     
       $card.addEventListener('mouseleave', () => {
-        document.removeEventListener('mousemove', rotateToMouse);
+        $card.removeEventListener('mousemove', rotateToMouse);
         $card.classList.add('returning'); // Add smooth transition back
         $card.style.transform = '';
         

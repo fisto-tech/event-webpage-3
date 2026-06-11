@@ -222,7 +222,20 @@
     }
   </style>
   <style>
-  
+    
+    .catalogue-inner-div {
+      width: 69.5%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+/* 
+    @media screen and (min-width: 1900px) {
+      .catalogue-inner-div {
+        width: 72.5%;
+      }
+    } */
   </style>
 </head>
 
@@ -234,8 +247,8 @@
   <div class="catalog-app ">
 
 
-    <div class="absolute bottom-0 left-0 w-[100%] h-[5%] bg-black outside-main-container flex items-center justify-center gap-[1.5vw] z-[9999]"
-      style="background-image: url('../global-assets/navbar-icons/nav-bg.webp'); background-size: 100%;">
+    <div class="absolute bottom-0 left-0 w-[100%] h-[5%] bg-black outside-main-container flex items-center justify-center gap-[1.5vw] z-[9999] catalogue-inner-div"
+      style="background-image: url('../global-assets/navbar-icons/nav-bg.webp'); background-size: 100%; ">
 
       <div class="custom-tooltip-container" data-tooltip="Thumbnail">
         <img src="../global-assets/navbar-icons/thumbnail-icon.svg" alt="foundation_thumbnails"

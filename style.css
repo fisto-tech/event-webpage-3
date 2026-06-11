@@ -320,22 +320,45 @@ a {
   transform-origin: center;
 }
 .aos-animate .blink-question {
-  /* Even more creative question mark pop with a glowing text-shadow and slight rotation */
+  /* Pops in first, then does a secondary animation and stops */
   animation: blinkQuestionCreative 2.5s ease-in-out forwards;
-  animation-delay: 1.2s; /* Waits for the main text to stabilize */
+  animation-delay: 0.5s; 
 }
 
 @keyframes blinkQuestionCreative {
-  0%   { opacity: 0; transform: scale(0.8) rotate(-10deg); text-shadow: 0 0 0px rgba(255,197,6,0); }
-  10%  { opacity: 1; transform: scale(1.2) rotate(5deg); text-shadow: 0 0 20px rgba(255,197,6,0.8); }
-  20%  { opacity: 0; transform: scale(0.9) rotate(-5deg); text-shadow: 0 0 0px rgba(255,197,6,0); }
-  35%  { opacity: 1; transform: scale(1.1) rotate(0deg); text-shadow: 0 0 15px rgba(255,197,6,0.6); }
-  50%  { opacity: 0.2; }
-  60%  { opacity: 1; text-shadow: 0 0 10px rgba(255,197,6,0.4); }
-  70%  { opacity: 0.4; }
-  80%  { opacity: 1; }
-  90%  { opacity: 0.7; }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); text-shadow: 0 0 0px rgba(255,197,6,0); }
+  /* Part 1: The Pop from nothing */
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  25% {
+    transform: scale(1);
+    text-shadow: 0 0 0px rgba(255,197,6,0);
+  }
+  
+  /* Part 2: The Animation */
+  45% {
+    transform: scale(1) rotate(-15deg);
+  }
+  65% {
+    transform: scale(1.25) rotate(10deg);
+    text-shadow: 0 0 25px rgba(255,197,6,1);
+  }
+  85% {
+    transform: scale(0.95) rotate(-5deg);
+    text-shadow: 0 0 5px rgba(255,197,6,0.2);
+  }
+  
+  /* Part 3: The Stop */
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    text-shadow: 0 0 5px rgba(255,197,6,0.3);
+  }
 }
 
 /* ── Sections ───────────────────────────────────── */
@@ -448,7 +471,7 @@ a {
 }
 
 .about__description {
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.65;
   max-width: 100%;
@@ -3277,7 +3300,7 @@ a {
   .about__badge { margin-bottom: 1rem; }
   .about__divider { margin: 1rem auto; }
   .about__title { font-size: clamp(1.9rem, 3.8vw, 2.9rem); }
-  .about__tagline { font-size: clamp(1.05rem, 2vw, 1.55rem); }
+  .about__tagline { font-size: clamp(1.05rem, 2vw, 1.85rem); }
 
   /* SOLUTIONS */
   .solutions__header { margin-bottom: 1.6rem; }
