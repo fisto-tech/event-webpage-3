@@ -62,15 +62,15 @@
     <div class="hero">
       <!-- Left — Text -->
       <div class="hero__text" data-aos="fade-right">
-        <h1 class="hero__title" data-aos="zoom-in" data-aos-delay="100">
+        <h1 class="hero__title" data-aos="flicker" data-aos-delay="100">
           Are You Losing<br>
           Customers at Your<br>
-          <span class="hero__highlight-events">Events?</span>
+          <span class="hero__highlight-events">Events<span class="blink-question">?</span></span>
         </h1>
         <hr class="hero__divider" data-aos="fade-up" data-aos-delay="150">
-        <h2 class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">Want to Increase Your Sales <br> and <span
+        <h2 class="hero__subtitle" data-aos="flicker" data-aos-delay="200">Want to Increase Your Sales <br> and <span
             class="highlight-green">Generate More Leads?</span></h2>
-        <p class="hero__description" data-aos="fade-up" data-aos-delay="250">
+        <p class="hero__description" data-aos="flicker" data-aos-delay="250">
           We create <strong>Interactive Digital Catalogues</strong>, <strong>Interactive 3D Websites</strong>,
           <strong>3D Mockup Wrap Apps</strong>, and <strong>Event Apps</strong> that help <strong>attract more
             visitors</strong>, <strong>engage customers</strong>, and <strong>generate quality leads</strong>.
@@ -160,7 +160,7 @@
         <div class="first-time__content">
           <p class="first-time__badge">
             <!-- 1<sup class="first-time__sup">st</sup> -->
-            TIME IN INDIA
+            TIME IN THE DIGITAL ECOSYSTEM
           </p>
           <hr class="first-time__divider" />
           <h2 class="first-time__title">3D Interactive<br><span class="first-time__highlight">Digital Catalogue</span>
@@ -527,9 +527,50 @@
 
       </div>
       <div class="media-section__visual">
-        <div class="media-section__video-wrapper">
-          <video class="media-section__video" src="assets/videos/interactive-3d-website-demos.mp4" autoplay muted loop playsinline
-            preload="metadata"></video>
+        <div class="media-section__video-wrapper" style="position: relative; overflow: hidden; border-radius: 20px;">
+          <video id="interactive3dVideo" class="media-section__video" src="assets/videos/interactive-3d-website-demos.mp4" autoplay muted playsinline
+            preload="metadata" style="width: 100%; border-radius: inherit; display: block;"></video>
+            
+          <!-- Background Audio for the video -->
+          <audio id="interactive3dAudio" loop>
+            <source src="Fisto_Tech_IDC/audios/Lights(chosic.com).mp3" type="audio/mpeg">
+          </audio>
+
+          <!-- Custom Controls Overlay -->
+          <div class="video-controls-overlay">
+            <div class="video-progress-container" id="videoProgressContainer" title="Seek Video">
+              <div class="video-progress-bar" id="videoProgressBar"></div>
+            </div>
+            <div class="video-controls-row">
+              <button id="videoPlayPauseBtn" class="video-control-btn" title="Play/Pause Video">
+                <!-- Pause Icon (Default, video is autoplay) -->
+                <svg id="videoPauseIcon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                </svg>
+                <!-- Play Icon -->
+                <svg id="videoPlayIcon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+              
+              <button id="videoMusicBtn" class="video-control-btn" title="Toggle Background Music">
+                <!-- Music Off Icon (Default, audio is paused) -->
+                <svg id="videoMusicOffIcon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73l4 4 1.27-1.27L4.27 3zM14 7h4V3h-6v5.18l2 2z"/>
+                </svg>
+                <!-- Music On Icon -->
+                <svg id="videoMusicOnIcon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+              </button>
+
+              <button id="videoFullscreenBtn" class="video-control-btn" title="Fullscreen">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -571,7 +612,7 @@
                 <rect x="8" y="14" width="8" height="2" rx="1" />
               </svg>
             </div>
-            <span>Business Card / Visiting Card Scanner</span>
+            <span>Business Card Scanner</span>
           </li>
           <li data-aos="fade-up" data-aos-delay="160">
             <div class="event-app__check">
@@ -596,6 +637,14 @@
               </svg>
             </div>
             <span>Voice Notes for Follow-ups</span>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="400">
+            <div class="event-app__check">
+              <svg width="57" height="60" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.8215 5.55695C43.8668 4.94378 46.9738 4.69266 50.0781 4.80883C50.7951 4.83669 51.4752 5.13402 51.9827 5.64142C52.4901 6.14883 52.7874 6.82897 52.8153 7.54602C52.8865 9.22752 52.8948 12.7698 52.0671 16.8026C51.5802 19.1811 48.7196 19.826 47.1426 18.2478L44.8661 15.9725C43.9796 16.7745 43.1035 17.588 42.2382 18.4128C39.9926 20.5515 37.1759 23.379 34.7997 26.2016C32.7786 28.6028 28.9014 28.5861 27.0037 25.9285C25.8038 24.2436 24.5572 22.5923 23.2655 20.9766C20.6126 22.7923 15.105 26.9711 8.91337 34.051C8.52863 34.4904 8.14229 34.9408 7.75438 35.4024C7.34857 35.8843 6.76796 36.1852 6.14029 36.239C5.51261 36.2927 4.88927 36.095 4.40741 35.6892C3.92554 35.2834 3.62462 34.7028 3.57084 34.0751C3.51705 33.4474 3.71482 32.8241 4.12063 32.3422C4.52912 31.8593 4.93446 31.3871 5.33662 30.9255C11.9748 23.335 17.9087 18.87 20.7658 16.932C22.7644 15.5771 25.3864 16.0438 26.8529 17.8583C28.2421 19.589 29.581 21.3595 30.8679 23.1676C30.8765 23.1784 30.8869 23.1877 30.8988 23.1949C30.9262 23.2066 30.9556 23.2131 30.9854 23.2139C31.0189 23.2162 31.0525 23.211 31.0837 23.1987C31.115 23.1863 31.143 23.1672 31.1659 23.1426C33.7024 20.13 36.6593 17.1671 38.9607 14.9738C39.9499 14.0321 40.8251 13.2246 41.5031 12.6107L39.3775 10.4803C37.7993 8.90333 38.4441 6.04383 40.8227 5.55577M40.0959 53.7326C39.9392 51.5833 39.7824 47.7488 39.7824 40.9967C39.7824 34.2446 39.9392 30.4113 40.0959 28.2596C40.2693 25.8727 42.0126 24.0107 44.4921 23.8587C45.2806 23.8112 46.2697 23.778 47.5012 23.778C48.7326 23.778 49.7218 23.8112 50.5103 23.8587C52.9898 24.0107 54.7331 25.8727 54.9064 28.2596C55.0632 30.4113 55.2199 34.2446 55.2199 40.9967C55.2199 47.7488 55.0632 51.5821 54.9064 53.7338C54.7331 56.1207 52.9898 57.9827 50.5103 58.1347C49.7218 58.1822 48.7326 58.2155 47.5012 58.2155C46.2697 58.2155 45.2806 58.1822 44.4921 58.1347C42.0126 57.9827 40.2693 56.1195 40.0959 53.7326ZM1.98312 54.381C1.86794 53.26 1.78125 51.645 1.78125 49.3104C1.78125 46.9758 1.86794 45.3608 1.98194 44.2398C2.22063 41.8766 4.11706 40.5217 6.194 40.4516C7.29566 40.4175 8.39781 40.4017 9.5 40.4041C10.9096 40.4041 11.9902 40.4243 12.806 40.4516C14.8829 40.5217 16.7794 41.8766 17.0181 44.2398C17.1321 45.3608 17.2188 46.9758 17.2188 49.3104C17.2188 51.645 17.1321 53.26 17.0192 54.381C16.7794 56.7441 14.8818 58.0991 12.806 58.1691C11.9902 58.1964 10.9096 58.2166 9.5 58.2166C8.09044 58.2166 7.00981 58.1964 6.194 58.1691C4.11706 58.0991 2.22181 56.7441 1.98312 54.381ZM20.7812 45.7479C20.7812 49.7985 20.8988 52.3551 21.0342 53.9618C21.2384 56.3938 23.1004 58.0551 25.4517 58.1585C26.2402 58.1929 27.2401 58.2166 28.5 58.2166C29.7599 58.2166 30.7598 58.1929 31.5483 58.1573C33.8996 58.0551 35.7616 56.3938 35.9658 53.9618C36.1012 52.3551 36.2188 49.7985 36.2188 45.7479C36.2188 41.6973 36.1012 39.1406 35.967 37.534C35.7616 35.102 33.9007 33.4406 31.5483 33.3373C30.7598 33.3029 29.7599 33.2791 28.5 33.2791C27.2401 33.2791 26.2402 33.3029 25.4529 33.3385C23.1004 33.4406 21.2372 35.102 21.033 37.534C20.9 39.1406 20.7812 41.6973 20.7812 45.7479Z" fill="#FFC506"/>
+              </svg>
+            </div>
+            <span>Lead Generation &amp; Marketing Growth</span>
           </li>
         </ul>
 

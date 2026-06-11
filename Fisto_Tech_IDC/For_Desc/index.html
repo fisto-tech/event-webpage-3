@@ -256,17 +256,40 @@
         </audio>
         <button id="bgmButton" class="bgm-toggle cursor-pointer">
           <img id="musicOnImg" src="../global-assets/navbar-icons/music-on-icon.svg" title="music on"
-            class="w-[2vw] h-[2vw]">
+            class="w-[2vw] h-[2vw] hidden">
           <img id="musicOffImg" src="../global-assets/navbar-icons/music-off-icon.svg" title="music off"
-            class="w-[2vw] h-[2vw] hidden"></button>
+            class="w-[2vw] h-[2vw]"></button>
       </div>
 
 
       <!-- ********************************Audio button end****************************************  -->
 
-      <div class="absolute top-[50%] left-[50%] text-white text-[3vw] md:text-[1.5vw] lg:text-[.8vw] z-[910]" title="page No"
+      <div class="absolute top-[50%] left-[50%] flex items-center justify-center gap-[1.5vw] text-white text-[3vw] md:text-[1.5vw] lg:text-[.8vw] z-[910]" title="page No"
         style="transform: translate(-50%, -50%);">
-        <p>Page <span id="page-no"></span></p>
+        
+        <!-- Go to first -->
+        <button id="goToFirstBtn" class="cursor-pointer hover:scale-110 transition-transform tb-link bg-white/10 hover:bg-white/20 p-[0.5vw] rounded-[0.4vw]" data-page="1" title="Go to First Page">
+          <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.4441 13.1175C12.5485 13.2244 12.6306 13.3511 12.6855 13.4901C12.7404 13.6291 12.7671 13.7777 12.7639 13.9271C12.7608 14.0766 12.7279 14.2239 12.6672 14.3604C12.6064 14.497 12.5191 14.6201 12.4103 14.7226C12.3015 14.825 12.1733 14.9048 12.0333 14.9571C11.8933 15.0095 11.7443 15.0335 11.5949 15.0276C11.4456 15.0217 11.2989 14.9861 11.1635 14.9229C11.028 14.8597 10.9065 14.7702 10.8061 14.6595L4.80606 8.28448C4.61011 8.07587 4.50103 7.80043 4.50103 7.51423C4.50103 7.22802 4.61011 6.95258 4.80606 6.74398L10.8061 0.368975C10.9065 0.25829 11.028 0.168729 11.1635 0.105527C11.2989 0.0423237 11.4456 0.00674533 11.5949 0.00086963C11.7443 -0.00500607 11.8933 0.0189388 12.0333 0.0713055C12.1733 0.123672 12.3015 0.203411 12.4103 0.305863C12.5191 0.408316 12.6064 0.531428 12.6672 0.668008C12.7279 0.804589 12.7608 0.951899 12.7639 1.10133C12.7671 1.25077 12.7404 1.39933 12.6855 1.53835C12.6306 1.67736 12.5485 1.80404 12.4441 1.91098L7.17006 7.51348L12.4441 13.1175ZM1.12506 0.0134753C0.826694 0.0134753 0.540546 0.132002 0.329568 0.34298C0.118589 0.553958 6.24657e-05 0.840107 6.24657e-05 1.13848V13.8885C6.24657e-05 14.1868 0.118589 14.473 0.329568 14.684C0.540546 14.8949 0.826694 15.0135 1.12506 15.0135C1.42343 15.0135 1.70958 14.8949 1.92056 14.684C2.13154 14.473 2.25006 14.1868 2.25006 13.8885V1.13848C2.25006 0.840107 2.13154 0.553958 1.92056 0.34298C1.70958 0.132002 1.42343 0.0134753 1.12506 0.0134753Z" fill="white"/>
+          </svg>
+        </button>
+
+        <!-- Home -->
+        <button id="goHomeBtn" class="cursor-pointer hover:scale-110 transition-transform tb-link bg-white/10 hover:bg-white/20 p-[0.5vw] rounded-[0.4vw]" data-page="1" title="Home">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 15.788V5.288L7 0L14 5.288V15.788H8.808V9.404H5.192V15.788H0Z" fill="white"/>
+          </svg>
+        </button>
+
+        <p class="mx-[1vw]">Page <span id="page-no"></span></p>
+
+        <!-- Go to last -->
+        <button id="goToLastBtn" class="cursor-pointer hover:scale-110 transition-transform tb-link bg-white/10 hover:bg-white/20 p-[0.5vw] rounded-[0.4vw]" data-page="16" title="Go to Last Page">
+          <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.320098 13.1175C0.215673 13.2244 0.133605 13.3511 0.0786875 13.4901C0.0237702 13.6291 -0.00289532 13.7777 0.00024897 13.9271C0.00339326 14.0766 0.0362844 14.2239 0.0970005 14.3604C0.157717 14.497 0.245041 14.6201 0.353871 14.7226C0.462702 14.825 0.590858 14.9048 0.730852 14.9571C0.870846 15.0095 1.01987 15.0335 1.16923 15.0276C1.31858 15.0217 1.46526 14.9861 1.60071 14.9229C1.73616 14.8597 1.85765 14.7702 1.9581 14.6595L7.9581 8.28448C8.15405 8.07587 8.26313 7.80043 8.26313 7.51423C8.26313 7.22802 8.15405 6.95258 7.9581 6.74398L1.9581 0.368975C1.85765 0.25829 1.73616 0.168729 1.60071 0.105527C1.46526 0.0423237 1.31858 0.00674533 1.16923 0.00086963C1.01987 -0.00500607 0.870846 0.0189388 0.730852 0.0713055C0.590858 0.123672 0.462702 0.203411 0.353871 0.305863C0.245041 0.408316 0.157717 0.531428 0.0970005 0.668008C0.0362844 0.804589 0.00339326 0.951899 0.00024897 1.10133C-0.00289532 1.25077 0.0237702 1.39933 0.0786875 1.53835C0.133605 1.67736 0.215673 1.80404 0.320098 1.91098L5.5941 7.51348L0.320098 13.1175ZM11.6391 0.0134753C11.9375 0.0134753 12.2236 0.132002 12.4346 0.34298C12.6456 0.553958 12.7641 0.840107 12.7641 1.13848V13.8885C12.7641 14.1868 12.6456 14.473 12.4346 14.684C12.2236 14.8949 11.9375 15.0135 11.6391 15.0135C11.3407 15.0135 11.0546 14.8949 10.8436 14.684C10.6326 14.473 10.5141 14.1868 10.5141 13.8885V1.13848C10.5141 0.840107 10.6326 0.553958 10.8436 0.34298C11.0546 0.132002 11.3407 0.0134753 11.6391 0.0134753Z" fill="white"/>
+          </svg>
+        </button>
+
       </div>
 
       <!-- Zoom Control Widget -->
@@ -370,9 +393,9 @@
       <div id="mobileDotsPopup" class="mob-dots-popup">
         <button id="mobMusicBtn" class="mob-action-row">
           <span class="mob-action-icon">
-            <img id="mobMusicOnImg" src="../global-assets/navbar-icons/music-on-icon.svg" class="mob-action-svg" />
+            <img id="mobMusicOnImg" src="../global-assets/navbar-icons/music-on-icon.svg" class="mob-action-svg hidden" />
             <img id="mobMusicOffImg" src="../global-assets/navbar-icons/music-off-icon.svg"
-              class="mob-action-svg hidden" />
+              class="mob-action-svg" />
           </span>
           <span class="mob-action-label">Music</span>
         </button>

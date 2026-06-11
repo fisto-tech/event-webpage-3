@@ -382,14 +382,13 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('load', function () {
     const bgmAudio = document.getElementById('bgmAudio');
     bgmAudio.volume = 0.15;
-    bgmAudio.muted = true; // ✅ Start muted to bypass autoplay restrictions
+    bgmAudio.muted = false; // Start unmuted, but we will NOT play it automatically
 
     const bgmButton = document.getElementById('bgmButton');
     const musicOnImg = document.getElementById('musicOnImg');
     const musicOffImg = document.getElementById('musicOffImg');
 
-    let musicOn = true;
-    let hasUnmuted = false; // Track if we've unmuted yet
+    let musicOn = false; // Default to off
 
     function updateIcons() {
         if (musicOn) {
@@ -401,13 +400,10 @@ window.addEventListener('load', function () {
         }
     }
 
-    function toggleMusic() {
-        // ✅ Unmute on first interaction
-        if (!hasUnmuted) {
-            bgmAudio.muted = false;
-            hasUnmuted = true;
-        }
+    // Initial state
+    updateIcons();
 
+    function toggleMusic() {
         if (musicOn) {
             bgmAudio.pause();
             musicOn = false;
@@ -422,25 +418,6 @@ window.addEventListener('load', function () {
     }
 
     bgmButton.onclick = toggleMusic;
-
-    // ✅ Auto-unmute on ANY click on the page
-    document.addEventListener('click', function unmute() {
-        if (!hasUnmuted) {
-            bgmAudio.muted = false;
-            hasUnmuted = true;
-            console.log('Audio unmuted');
-        }
-    }, { once: true }); // Only fires once
-
-    // ✅ Start playing muted immediately
-    bgmAudio.play().then(() => {
-        console.log('Audio playing (muted initially)');
-        updateIcons();
-    }).catch(function (error) {
-        console.log('Autoplay failed:', error);
-        musicOn = false;
-        updateIcons();
-    });
 });
 
 
@@ -1414,28 +1391,32 @@ $('#flipbook').bind('turned', function (event, page) {
 const downloadBtn = document.getElementById("download-btn");
 const downloadPopup = document.getElementById("downloadPopup");
 
-downloadBtn.addEventListener("click", () => {
+if (downloadBtn) {
+    downloadBtn.addEventListener("click", () => {
 
-    // 1. Show notification popup
-    downloadPopup.classList.remove("hidden");
-    setTimeout(() => {
-        downloadPopup.classList.add("opacity-100");
-    }, 10);
+        // 1. Show notification popup
+        if (downloadPopup) {
+            downloadPopup.classList.remove("hidden");
+            setTimeout(() => {
+                downloadPopup.classList.add("opacity-100");
+            }, 10);
 
-    // 2. Auto-hide popup after 2 seconds
-    setTimeout(() => {
-        downloadPopup.classList.remove("opacity-100");
-        setTimeout(() => downloadPopup.classList.add("hidden"), 300);
-    }, 2000);
+            // 2. Auto-hide popup after 2 seconds
+            setTimeout(() => {
+                downloadPopup.classList.remove("opacity-100");
+                setTimeout(() => downloadPopup.classList.add("hidden"), 300);
+            }, 2000);
+        }
 
-    // 3. Trigger PDF download
-    const link = document.createElement("a");
-    link.href = "../global-assets/Fisto-Tech-IDC.pdf";   // <<-- put your PDF file path
-    link.download = "Fisto-Tech-IDC.pdf";                 // <<-- filename user will download
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-})
+        // 3. Trigger PDF download
+        const link = document.createElement("a");
+        link.href = "../global-assets/Fisto-Tech-IDC.pdf";   // <<-- put your PDF file path
+        link.download = "Fisto-Tech-IDC.pdf";                 // <<-- filename user will download
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    })
+}
 // ***********************************download code end******************************************
 
 
@@ -1443,18 +1424,22 @@ const leftArrow = document.getElementById("leftArrow");
 const rightArrow = document.getElementById("rightArrow");
 
 // ---- Arrow Click Navigation (Front / Last) ----
-leftArrow.addEventListener("click", () => {
-    $("#flipbook").turn("page", 1);       // ⬅ Jump to FIRST PAGE
-});
+if (leftArrow) {
+    leftArrow.addEventListener("click", () => {
+        $("#flipbook").turn("page", 1);       // ⬅ Jump to FIRST PAGE
+    });
+}
 
-rightArrow.addEventListener("click", () => {
-    const totalPages = $("#flipbook").turn("pages");
-    $("#flipbook").turn("page", totalPages);   // ⬅ Jump to LAST PAGE
-});
-
+if (rightArrow) {
+    rightArrow.addEventListener("click", () => {
+        const totalPages = $("#flipbook").turn("pages");
+        $("#flipbook").turn("page", totalPages);   // ⬅ Jump to LAST PAGE
+    });
+}
 
 // ---- Show / Hide Arrows Based on Page ----
 function updateArrows(page) {
+    if (!leftArrow || !rightArrow) return; // ✅ Exit if arrows are missing from DOM
 
     // ❌ If autoplay is running → always hide arrows
     if (isAutoPlaying) {

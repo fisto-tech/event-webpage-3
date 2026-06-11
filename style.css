@@ -244,23 +244,98 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 clamp(1rem, 4vw, 3rem);
+  position: relative;
 }
 
 .navbar__logo {
   display: inline-flex;
   align-items: center;
-  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navbar__logo:hover {
   opacity: 0.85;
-  transform: scale(1.03);
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+@media (min-width: 992px) {
+  .navbar:not(.is-scrolled) .navbar__logo {
+    /* On laptops, align perfectly with the left edge of the text and keep it safely near the top */
+    left: clamp(1rem, 4vw, 3rem);
+    top: 3vh;
+    transform: translate(0, 0) scale(1.08);
+  }
+
+  .navbar:not(.is-scrolled) .navbar__logo:hover {
+    transform: translate(0, 0) scale(1.13);
+  }
+}
+
+@media (min-width: 1600px) {
+  .navbar:not(.is-scrolled) .navbar__logo {
+    /* On large screens (>1600px), push into the light sandal area exactly as you originally designed */
+    left: -7%;
+    top: 135%;
+  }
 }
 
 .navbar__logo img {
-  height: 42px;
+  /* Use clamp so it scales safely. Slightly reduced from 60px per request */
+  height: clamp(40px, 4.5vw, 56px);
   width: auto;
   object-fit: contain;
+}
+
+/* ── Custom AOS Flicker Animations ──────────────── */
+[data-aos="flicker"] {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition-property: transform, opacity;
+}
+[data-aos="flicker"].aos-animate {
+  /* Slower, elegant cinematic flicker without blur */
+  animation: textCinematicFlicker 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes textCinematicFlicker {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.98); }
+  20%  { opacity: 0.5; }
+  25%  { opacity: 0.1; }
+  45%  { opacity: 0.8; }
+  50%  { opacity: 0.4; }
+  70%  { opacity: 1;   transform: translateY(0) scale(1); }
+  75%  { opacity: 0.7; }
+  85%  { opacity: 1; }
+  92%  { opacity: 0.8; }
+  100% { opacity: 1;   transform: translateY(0) scale(1); }
+}
+
+.blink-question {
+  display: inline-block;
+  opacity: 0;
+  transform-origin: center;
+}
+.aos-animate .blink-question {
+  /* Even more creative question mark pop with a glowing text-shadow and slight rotation */
+  animation: blinkQuestionCreative 2.5s ease-in-out forwards;
+  animation-delay: 1.2s; /* Waits for the main text to stabilize */
+}
+
+@keyframes blinkQuestionCreative {
+  0%   { opacity: 0; transform: scale(0.8) rotate(-10deg); text-shadow: 0 0 0px rgba(255,197,6,0); }
+  10%  { opacity: 1; transform: scale(1.2) rotate(5deg); text-shadow: 0 0 20px rgba(255,197,6,0.8); }
+  20%  { opacity: 0; transform: scale(0.9) rotate(-5deg); text-shadow: 0 0 0px rgba(255,197,6,0); }
+  35%  { opacity: 1; transform: scale(1.1) rotate(0deg); text-shadow: 0 0 15px rgba(255,197,6,0.6); }
+  50%  { opacity: 0.2; }
+  60%  { opacity: 1; text-shadow: 0 0 10px rgba(255,197,6,0.4); }
+  70%  { opacity: 0.4; }
+  80%  { opacity: 1; }
+  90%  { opacity: 0.7; }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); text-shadow: 0 0 0px rgba(255,197,6,0); }
 }
 
 /* ── Sections ───────────────────────────────────── */
@@ -283,7 +358,8 @@ a {
   background-size: cover;
 }
 .section--about {
-  background: url('./assets/images/about-solutions-bg.webp') center center/cover no-repeat;
+  /* background: url('./assets/images/about-solutions-bg.webp') center center/cover no-repeat; */
+  background: url('./assets/images/event-app/event-app-bg.webp') center center/cover no-repeat;
   background-color: #0c2025;
   padding: 6rem clamp(1.5rem, 4vw, 4rem);
   min-height: unset;
@@ -382,7 +458,8 @@ a {
 
 .section--solutions {
   min-height: unset;
-  background: url('./assets/images/about-solutions-bg.webp') center center/cover no-repeat;
+  /* background: url('./assets/images/about-solutions-bg.webp') center center/cover no-repeat; */
+  background: url('./assets/images/event-app/event-app-bg.webp') center center/cover no-repeat;
   background-color: #0c2025;
   color: #ffffff;
   padding: 5rem clamp(1.5rem, 4vw, 4rem);
@@ -1265,6 +1342,55 @@ a {
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+/* Fullscreen mode adjustments */
+.media-section__video-wrapper:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  border-radius: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.media-section__video-wrapper:-webkit-full-screen .media-section__video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.media-section__video-wrapper:fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  border-radius: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.media-section__video-wrapper:fullscreen .media-section__video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
 }
 
 /* ── Comparison Section ───────────────────────────── */
@@ -3488,4 +3614,81 @@ a {
   .catalog-embed__container {
     scale: 1.15;
   }
+}
+
+/* ── Interactive 3D Video Controls ───────────── */
+.video-controls-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.video-progress-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.video-progress-bar {
+  height: 100%;
+  background: #FFC506;
+  width: 0%;
+  border-radius: 3px;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+.video-controls-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.video-controls-row #videoFullscreenBtn {
+  margin-left: auto;
+}
+
+.media-section__video-wrapper:hover .video-controls-overlay {
+  opacity: 1;
+}
+
+.video-control-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-control-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  color: #FFC506;
+  transform: scale(1.08);
+}
+
+.video-control-btn svg {
+  width: 22px;
+  height: 22px;
 }
